@@ -7,7 +7,7 @@ See it in action [here](https://jsfiddle.net/tmbocheeko/j5crh3od/latest).
 
 ## Using this in your project
 
-### Import searchable-inputs
+### Import this
 Use jsDelivr to import this into your project!
 
 CSS _(Put this in your `<head>`)_
