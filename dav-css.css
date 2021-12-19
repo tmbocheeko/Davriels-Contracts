@@ -1,0 +1,1623 @@
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--dav-base-dark-full);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--dav-button-color-full);
+}
+
+:root {
+	/* Davriel Variables */
+  --dav-color-r: 190; /* Card text background color - Red value */
+  --dav-color-g: 177; /* Card text background color - Green value */
+  --dav-color-b: 206; /* Card text background color - Blue value */
+  --dav-color-a: 0.8; /* Card text background color - Alpha value */
+  --dav-color: rgba(var(--dav-color-r), var(--dav-color-g), var(--dav-color-b), var(--dav-color-a)); /* Card text background color */
+  --dav-color-full: rgba(var(--dav-color-r), var(--dav-color-g), var(--dav-color-b)); /* Card text background color - Max alpha */
+  --dav-top-image: url(null); /* Card text background image - Top */
+  --dav-bottom-image: url(null); /* Card text background image - Bottom */
+  --dav-font-color: calc(( ( ( (var(--dav-color-r) * 299) + (var(--dav-color-g) * 587) + (var(--dav-color-b) * 114) ) / 1000 ) - 128 ) * -1000); /* Card text font color */ /* ngl i hate that this makes it grey so uh */
+  --dav-font-color: black;
+  --highlight-color-var: 0.8; /* Amount to vary the color between the card and the highlight color */
+  --highlight-color-r: calc(var(--dav-color-r) * var(--highlight-color-var)); /* Highlight color - Red value */
+  --highlight-color-g: calc(var(--dav-color-g) * var(--highlight-color-var)); /* Highlight color - Green value */
+  --highlight-color-b: calc(var(--dav-color-b) * var(--highlight-color-var)); /* Highlight color - Blue value */
+  --highlight-color: rgba(var(--highlight-color-r), var(--highlight-color-g), var(--highlight-color-b)); /* Highlight color */
+  --dav-base-v: 1.1; /* Amount to vary the background color between the card and the display box */
+  --dav-base-r: calc(var(--dav-color-r) * var(--dav-base-v)); /* Display box background color - Red value */
+  --dav-base-g: calc(var(--dav-color-g) * var(--dav-base-v)); /* Display box background color - Green value */
+  --dav-base-b: calc(var(--dav-color-b) * var(--dav-base-v)); /* Display box background color - Blue value */
+  --dav-base-a: var(--dav-color-a); /* Display box background color - Alpha value */
+  --dav-base: rgba(var(--dav-base-r), var(--dav-base-g), var(--dav-base-b), var(--dav-base-a)); /* Display box background color */
+  --dav-base-full: rgba(var(--dav-base-r), var(--dav-base-g), var(--dav-base-b)); /* Display box background color - Max alpha */
+  --dav-base-font-color: calc(( ( ( (var(--dav-base-r) * 299) + (var(--dav-base-g) * 587) + (var(--dav-base-b) * 114) ) / 1000 ) - 128 ) * -1000); /* Display box font color */ /* ngl i hate that this makes it grey so uh */
+  --dav-base-font-color: black;
+  --dav-button-color-var: 0.33; /* Amount to vary the background color between the display box and the display box's inners */
+  --dav-button-color-r: calc(var(--dav-base-r) * var(--dav-button-color-var)); /* Display inner background color - Red value */
+  --dav-button-color-g: calc(var(--dav-base-g) * var(--dav-button-color-var)); /* Display inner background color - Green value */
+  --dav-button-color-b: calc(var(--dav-base-b) * var(--dav-button-color-var)); /* Display inner background color - Blue value */
+  --dav-button-color-a: 0.5; /* Display inner background color - Alpha value */
+  --dav-button-color: rgba(var(--dav-button-color-r), var(--dav-button-color-g), var(--dav-button-color-b), var(--dav-button-color-a)); /* Display inner background color */
+  --dav-button-color-full: rgba(var(--dav-button-color-r), var(--dav-button-color-g), var(--dav-button-color-b)); /* Display inner background color - Max alpha */
+  --dav-button-font-color: calc(( ( ( (var(--dav-button-color-r) * 299) + (var(--dav-button-color-g) * 587) + (var(--dav-button-color-b) * 114) ) / 1000 ) - 128 ) * -1000); /* Display inner font color */ /* ngl i hate that this makes it grey so uh */
+  --dav-button-font-color: white;
+  --dav-hover-color-var: 0.65; /* Amount to vary the background color between the display box's inners and the display box's inners when hovered */
+  --dav-hover-color-r: calc(var(--dav-button-color-r) * var(--dav-hover-color-var)); /* Display inner hover background color - Red value */
+  --dav-hover-color-g: calc(var(--dav-button-color-g) * var(--dav-hover-color-var)); /* Display inner hover background color - Green value */
+  --dav-hover-color-b: calc(var(--dav-button-color-b) * var(--dav-hover-color-var)); /* Display inner hover background color - Blue value */
+  --dav-hover-color-a: var(--dav-button-color-a); /* Display inner hover background color - Alpha value */
+  --dav-hover-color: rgba(var(--dav-hover-color-r), var(--dav-hover-color-g), var(--dav-hover-color-b), var(--dav-hover-color-a)); /* Display inner hover background color */
+  --dav-hover-color-full: rgba(var(--dav-hover-color-r), var(--dav-hover-color-g), var(--dav-hover-color-b)); /* Display inner hover background color - Max alpha */
+  --dav-hover-font-color: calc(( ( ( (var(--dav-hover-color-r) * 299) + (var(--dav-hover-color-g) * 587) + (var(--dav-hover-color-b) * 114) ) / 1000 ) - 128 ) * -1000); /* Display inner hover font color */ /* ngl i hate that this makes it grey so uh */
+  --dav-hover-font-color: white;
+  --dav-active-color-var: 0.5; /* Amount to vary the background color between the display box's inners when hovered and the display box's inners when active */
+  --dav-active-color-r: calc(var(--dav-hover-color-r) * var(--dav-active-color-var)); /* Display inner hover background color - Red value */
+  --dav-active-color-g: calc(var(--dav-hover-color-g) * var(--dav-active-color-var)); /* Display inner hover background color - Green value */
+  --dav-active-color-b: calc(var(--dav-hover-color-b) * var(--dav-active-color-var)); /* Display inner hover background color - Blue value */
+  --dav-active-color-a: var(--dav-hover-color-a); /* Display inner hover background color - Alpha value */
+  --dav-active-color: rgba(var(--dav-active-color-r), var(--dav-active-color-g), var(--dav-active-color-b), var(--dav-active-color-a)); /* Display inner hover background color */
+  --dav-active-color-full: rgba(var(--dav-active-color-r), var(--dav-active-color-g), var(--dav-active-color-b)); /* Display inner hover background color - Max alpha */
+  --dav-active-font-color: calc(( ( ( (var(--dav-active-color-r) * 299) + (var(--dav-active-color-g) * 587) + (var(--dav-active-color-b) * 114) ) / 1000 ) - 128 ) * -1000); /* Display inner hover font color */ /* ngl i hate that this makes it grey so uh */
+  --dav-active-font-color: white;
+  --dav-base-dark-var: 2.7; /* Amount to vary the background color between the display box's inners when hovered and the alternate display box's inners when hovered */
+  --dav-base-dark-r: calc(var(--dav-hover-color-r) * var(--dav-base-dark-var)); /* Display alt hover background color - Red value */
+  --dav-base-dark-g: calc(var(--dav-hover-color-g) * var(--dav-base-dark-var)); /* Display alt inner hover background color - Green value */
+  --dav-base-dark-b: calc(var(--dav-hover-color-b) * var(--dav-base-dark-var)); /* Display alt inner hover background color - Blue value */
+  --dav-base-dark-a: var(--dav-hover-color-a); /* Display alt inner hover background color - Alpha value */
+  --dav-base-dark: rgba(var(--dav-base-dark-r), var(--dav-base-dark-g), var(--dav-base-dark-b), var(--dav-base-dark-a)); /* Display alt inner hover background color */
+  --dav-base-dark-full: rgba(var(--dav-base-dark-r), var(--dav-base-dark-g), var(--dav-base-dark-b)); /* Display alt inner hover background color - Max alpha */
+  --dav-base-dark-font-color: calc(( ( ( (var(--dav-base-dark-r) * 299) + (var(--dav-base-dark-g) * 587) + (var(--dav-base-dark-b) * 114) ) / 1000 ) - 128 ) * -1000); /* Display alt inner hover font color */ /* ngl i hate that this makes it grey so uh */
+  --dav-base-dark-font-color: black;
+  --dav-border-color-var: 0; /* Amount to vary the border color from the base color */
+  --dav-border-color-r: calc(var(--dav-base-r) * 0.4); /* Border color - Red value */
+  --dav-border-color-g: calc(var(--dav-base-g) * 0.2); /* Border color - Green value */
+  --dav-border-color-b: calc(var(--dav-base-b) * 0.4); /* Border color - Blue value */
+  --dav-border-color-a: var(--dav-base-a); /* Border color - Alpha value */
+  --dav-border-color: rgba(var(--dav-border-color-r), var(--dav-border-color-g), var(--dav-border-color-b), var(--dav-border-color-a)); /* Border background color */
+  --dav-border-color-full: rgba(var(--dav-border-color-r), var(--dav-border-color-g), var(--dav-border-color-b)); /* Border color - Max alpha */
+  --dav-border-font-color: calc(( ( ( (var(--dav-border-color-r) * 299) + (var(--dav-border-color-g) * 587) + (var(--dav-border-color-b) * 114) ) / 1000 ) - 128 ) * -1000); /* Border font color */ /* ngl i hate that this makes it grey so uh */
+  --dav-border-font-color: black;
+  --dav-selected-color: yellow; /* Highlight color for selected card */
+  --dav-width: min(96.67vw, 300px); /* Card width */
+  --dav-height: calc(var(--dav-width) * 1.375); /* Card height */
+  --dav-border-width: 2px; /* Card border width */
+  --dav-top-radius: calc(var(--dav-width) / 10); /* Card border top radius */
+  --dav-bottom-radius-maj: calc(var(--dav-width) / 2); /* Card border bottom radius - Major */
+  --dav-bottom-radius-min: calc(var(--dav-width) / 3); /* Card border bottom radius - Minor */
+  --dav-bottom-height: 0.45; /* Card bottom height (in decimal, not percent) */
+  --dav-top-height: 10%; /* Card top height (in percent) */
+  --dav-top-font-size: calc(var(--dav-width) / 10); /* Card header font size */
+  --dav-bottom-font-size: calc(var(--dav-width) / 16); /* Card text font size */
+	/* Mobile styles */
+  --dav-mobile-height: calc(var(--dav-width) * 0.57); /* Mobile card height */
+  --dav-mobile-bottom-radius-maj: calc(var(--dav-width) / 6); /* Mobile card border bottom radius - Major */
+  --dav-mobile-bottom-radius-min: calc(var(--dav-width) / 8); /* Mobile card border bottom radius - Minor */
+  --dav-mobile-bottom-height: 0.82; /* Mobile card bottom height (in decimal, not percent) */
+  --dav-mobile-top-height: calc(1 - var(--dav-mobile-bottom-height));/* Mobile card top height */
+  --dav-mobile-top-font-size: calc(var(--dav-width) / 11.5); /* Mobile card header font size */
+  --dav-mobile-bottom-font-size: calc(var(--dav-width) / 16); /* Mobile card header font size */
+	/* Draft Variables */
+  --draft-color-r: 70; /* Card text background color - Red value */
+  --draft-color-g: 125; /* Card text background color - Green value */
+  --draft-color-b: 180; /* Card text background color - Blue value */
+  --draft-color-a: 0.8; /* Card text background color - Alpha value */
+  --draft-color: rgba(var(--draft-color-r), var(--draft-color-g), var(--draft-color-b), var(--draft-color-a)); /* Card text background color */
+  --draft-color-full: rgba(var(--draft-color-r), var(--draft-color-g), var(--draft-color-b)); /* Card text background color - Max alpha */
+  --draft-top-image: url(null); /* Card text background image - Top */
+  --draft-bottom-image: url(null); /* Card text background image - Bottom */
+  --draft-font-color: calc(( ( ( (var(--draft-color-r) * 299) + (var(--draft-color-g) * 587) + (var(--draft-color-b) * 114) ) / 1000 ) - 128 ) * -1000); /* Card text font color */ /* ngl i hate that this makes it grey so uh */
+  --draft-font-color: black;
+  --draft-base-v: 1.3; /* Amount to vary the background color between the card and the display box */
+  --draft-base-r: calc(var(--draft-color-r) * var(--draft-base-v)); /* Display box background color - Red value */
+  --draft-base-g: calc(var(--draft-color-g) * var(--draft-base-v)); /* Display box background color - Green value */
+  --draft-base-b: calc(var(--draft-color-b) * var(--draft-base-v)); /* Display box background color - Blue value */
+  --draft-base-a: var(--draft-color-a); /* Display box background color - Alpha value */
+  --draft-base: rgba(var(--draft-base-r), var(--draft-base-g), var(--draft-base-b), var(--draft-base-a)); /* Display box background color */
+  --draft-base-full: rgba(var(--draft-base-r), var(--draft-base-g), var(--draft-base-b)); /* Display box background color - Max alpha */
+  --draft-base-font-color: calc(( ( ( (var(--draft-base-r) * 299) + (var(--draft-base-g) * 587) + (var(--draft-base-b) * 114) ) / 1000 ) - 128 ) * -1000); /* Display box font color */ /* ngl i hate that this makes it grey so uh */
+  --draft-base-font-color: black;
+  --draft-button-color-var: 0.3; /* Amount to vary the background color between the display box and the display box's inners */
+  --draft-button-color-r: calc(var(--draft-base-r) * var(--draft-button-color-var)); /* Display inner background color - Red value */
+  --draft-button-color-g: calc(var(--draft-base-g) * var(--draft-button-color-var)); /* Display inner background color - Green value */
+  --draft-button-color-b: calc(var(--draft-base-b) * var(--draft-button-color-var)); /* Display inner background color - Blue value */
+  --draft-button-color-a: 0.5; /* Display inner background color - Alpha value */
+  --draft-button-color: rgba(var(--draft-button-color-r), var(--draft-button-color-g), var(--draft-button-color-b), var(--draft-button-color-a)); /* Display inner background color */
+  --draft-button-color-full: rgba(var(--draft-button-color-r), var(--draft-button-color-g), var(--draft-button-color-b)); /* Display inner background color - Max alpha */
+  --draft-button-font-color: calc(( ( ( (var(--draft-button-color-r) * 299) + (var(--draft-button-color-g) * 587) + (var(--draft-button-color-b) * 114) ) / 1000 ) - 128 ) * -1000); /* Display inner font color */ /* ngl i hate that this makes it grey so uh */
+  --draft-button-font-color: white;
+  --draft-hover-color-var: 0.65; /* Amount to vary the background color between the display box's inners and the display box's inners when hovered */
+  --draft-hover-color-r: calc(var(--draft-button-color-r) * var(--draft-hover-color-var)); /* Display inner hover background color - Red value */
+  --draft-hover-color-g: calc(var(--draft-button-color-g) * var(--draft-hover-color-var)); /* Display inner hover background color - Green value */
+  --draft-hover-color-b: calc(var(--draft-button-color-b) * var(--draft-hover-color-var)); /* Display inner hover background color - Blue value */
+  --draft-hover-color-a: var(--draft-button-color-a); /* Display inner hover background color - Alpha value */
+  --draft-hover-color: rgba(var(--draft-hover-color-r), var(--draft-hover-color-g), var(--draft-hover-color-b), var(--draft-hover-color-a)); /* Display inner hover background color */
+  --draft-hover-color-full: rgba(var(--draft-hover-color-r), var(--draft-hover-color-g), var(--draft-hover-color-b)); /* Display inner hover background color - Max alpha */
+  --draft-hover-font-color: calc(( ( ( (var(--draft-hover-color-r) * 299) + (var(--draft-hover-color-g) * 587) + (var(--draft-hover-color-b) * 114) ) / 1000 ) - 128 ) * -1000); /* Display inner hover font color */ /* ngl i hate that this makes it grey so uh */
+  --draft-hover-font-color: white;
+  --draft-active-color-var: 0.7; /* Amount to vary the background color between the display box's inners when hovered and the display box's inners when active */
+  --draft-active-color-r: calc(var(--draft-hover-color-r) * var(--draft-active-color-var)); /* Display inner hover background color - Red value */
+  --draft-active-color-g: calc(var(--draft-hover-color-g) * var(--draft-active-color-var)); /* Display inner hover background color - Green value */
+  --draft-active-color-b: calc(var(--draft-hover-color-b) * var(--draft-active-color-var)); /* Display inner hover background color - Blue value */
+  --draft-active-color-a: var(--draft-hover-color-a); /* Display inner hover background color - Alpha value */
+  --draft-active-color: rgba(var(--draft-active-color-r), var(--draft-active-color-g), var(--draft-active-color-b), var(--draft-active-color-a)); /* Display inner hover background color */
+  --draft-active-color-full: rgba(var(--draft-active-color-r), var(--draft-active-color-g), var(--draft-active-color-b)); /* Display inner hover background color - Max alpha */
+  --draft-active-font-color: calc(( ( ( (var(--draft-active-color-r) * 299) + (var(--draft-active-color-g) * 587) + (var(--draft-active-color-b) * 114) ) / 1000 ) - 128 ) * -1000); /* Display inner hover font color */ /* ngl i hate that this makes it grey so uh */
+  --draft-active-font-color: white;
+  --draft-base-dark-var: 3; /* Amount to vary the background color between the display box's inners when hovered and the alternate display box's inners when hovered */
+  --draft-base-dark-r: calc(var(--draft-hover-color-r) * var(--draft-base-dark-var)); /* Display alt hover background color - Red value */
+  --draft-base-dark-g: calc(var(--draft-hover-color-g) * var(--draft-base-dark-var)); /* Display alt inner hover background color - Green value */
+  --draft-base-dark-b: calc(var(--draft-hover-color-b) * var(--draft-base-dark-var)); /* Display alt inner hover background color - Blue value */
+  --draft-base-dark-a: var(--draft-hover-color-a); /* Display alt inner hover background color - Alpha value */
+  --draft-base-dark: rgba(var(--draft-base-dark-r), var(--draft-base-dark-g), var(--draft-base-dark-b), var(--draft-base-dark-a)); /* Display alt inner hover background color */
+  --draft-base-dark-full: rgba(var(--draft-base-dark-r), var(--draft-base-dark-g), var(--draft-base-dark-b)); /* Display alt inner hover background color - Max alpha */
+  --draft-base-dark-font-color: calc(( ( ( (var(--draft-base-dark-r) * 299) + (var(--draft-base-dark-g) * 587) + (var(--draft-base-dark-b) * 114) ) / 1000 ) - 128 ) * -1000); /* Display alt inner hover font color */ /* ngl i hate that this makes it grey so uh */
+  --draft-base-dark-font-color: black;
+  --draft-border-color-var: 0; /* Amount to vary the border color from the base color */
+  --draft-border-color-r: calc(var(--draft-base-r) * 0.2); /* Border color - Red value */
+  --draft-border-color-g: calc(var(--draft-base-g) * 0.3); /* Border color - Green value */
+  --draft-border-color-b: calc(var(--draft-base-b) * 0.4); /* Border color - Blue value */
+  --draft-border-color-a: var(--draft-base-a); /* Border color - Alpha value */
+  --draft-border-color: rgba(var(--draft-border-color-r), var(--draft-border-color-g), var(--draft-border-color-b), var(--draft-border-color-a)); /* Border background color */
+  --draft-border-color-full: rgba(var(--draft-border-color-r), var(--draft-border-color-g), var(--draft-border-color-b)); /* Border color - Max alpha */
+  --draft-border-font-color: calc(( ( ( (var(--draft-border-color-r) * 299) + (var(--draft-border-color-g) * 587) + (var(--draft-border-color-b) * 114) ) / 1000 ) - 128 ) * -1000); /* Border font color */ /* ngl i hate that this makes it grey so uh */
+  --draft-border-font-color: black;
+  --draft-selected-color: yellow; /* Highlight color for selected card */
+	/* Momir Variables */
+  --momir-color-r: 100; /* Card text background color - Red value */
+  --momir-color-g: 183; /* Card text background color - Green value */
+  --momir-color-b: 97; /* Card text background color - Blue value */
+  --momir-color-a: 0.8; /* Card text background color - Alpha value */
+  --momir-color: rgba(var(--momir-color-r), var(--momir-color-g), var(--momir-color-b), var(--momir-color-a)); /* Card text background color */
+  --momir-color-full: rgba(var(--momir-color-r), var(--momir-color-g), var(--momir-color-b)); /* Card text background color - Max alpha */
+  --momir-top-image: url(null); /* Card text background image - Top */
+  --momir-bottom-image: url(null); /* Card text background image - Bottom */
+  --momir-font-color: calc(( ( ( (var(--momir-color-r) * 299) + (var(--momir-color-g) * 587) + (var(--momir-color-b) * 114) ) / 1000 ) - 128 ) * -1000); /* Card text font color */ /* ngl i hate that this makes it grey so uh */
+  --momir-font-color: black;
+  --momir-base-v: 1.3; /* Amount to vary the background color between the card and the display box */
+  --momir-base-r: calc(var(--momir-color-r) * var(--momir-base-v)); /* Display box background color - Red value */
+  --momir-base-g: calc(var(--momir-color-g) * var(--momir-base-v)); /* Display box background color - Green value */
+  --momir-base-b: calc(var(--momir-color-b) * var(--momir-base-v)); /* Display box background color - Blue value */
+  --momir-base-a: var(--momir-color-a); /* Display box background color - Alpha value */
+  --momir-base: rgba(var(--momir-base-r), var(--momir-base-g), var(--momir-base-b), var(--momir-base-a)); /* Display box background color */
+  --momir-base-full: rgba(var(--momir-base-r), var(--momir-base-g), var(--momir-base-b)); /* Display box background color - Max alpha */
+  --momir-base-font-color: calc(( ( ( (var(--momir-base-r) * 299) + (var(--momir-base-g) * 587) + (var(--momir-base-b) * 114) ) / 1000 ) - 128 ) * -1000); /* Display box font color */ /* ngl i hate that this makes it grey so uh */
+  --momir-base-font-color: black;
+  --momir-button-color-var: 0.3; /* Amount to vary the background color between the display box and the display box's inners */
+  --momir-button-color-r: calc(var(--momir-base-r) * var(--momir-button-color-var)); /* Display inner background color - Red value */
+  --momir-button-color-g: calc(var(--momir-base-g) * var(--momir-button-color-var)); /* Display inner background color - Green value */
+  --momir-button-color-b: calc(var(--momir-base-b) * var(--momir-button-color-var)); /* Display inner background color - Blue value */
+  --momir-button-color-a: 0.5; /* Display inner background color - Alpha value */
+  --momir-button-color: rgba(var(--momir-button-color-r), var(--momir-button-color-g), var(--momir-button-color-b), var(--momir-button-color-a)); /* Display inner background color */
+  --momir-button-color-full: rgba(var(--momir-button-color-r), var(--momir-button-color-g), var(--momir-button-color-b)); /* Display inner background color - Max alpha */
+  --momir-button-font-color: calc(( ( ( (var(--momir-button-color-r) * 299) + (var(--momir-button-color-g) * 587) + (var(--momir-button-color-b) * 114) ) / 1000 ) - 128 ) * -1000); /* Display inner font color */ /* ngl i hate that this makes it grey so uh */
+  --momir-button-font-color: white;
+  --momir-hover-color-var: 0.65; /* Amount to vary the background color between the display box's inners and the display box's inners when hovered */
+  --momir-hover-color-r: calc(var(--momir-button-color-r) * var(--momir-hover-color-var)); /* Display inner hover background color - Red value */
+  --momir-hover-color-g: calc(var(--momir-button-color-g) * var(--momir-hover-color-var)); /* Display inner hover background color - Green value */
+  --momir-hover-color-b: calc(var(--momir-button-color-b) * var(--momir-hover-color-var)); /* Display inner hover background color - Blue value */
+  --momir-hover-color-a: var(--momir-button-color-a); /* Display inner hover background color - Alpha value */
+  --momir-hover-color: rgba(var(--momir-hover-color-r), var(--momir-hover-color-g), var(--momir-hover-color-b), var(--momir-hover-color-a)); /* Display inner hover background color */
+  --momir-hover-color-full: rgba(var(--momir-hover-color-r), var(--momir-hover-color-g), var(--momir-hover-color-b)); /* Display inner hover background color - Max alpha */
+  --momir-hover-font-color: calc(( ( ( (var(--momir-hover-color-r) * 299) + (var(--momir-hover-color-g) * 587) + (var(--momir-hover-color-b) * 114) ) / 1000 ) - 128 ) * -1000); /* Display inner hover font color */ /* ngl i hate that this makes it grey so uh */
+  --momir-hover-font-color: white;
+  --momir-active-color-var: 0.7; /* Amount to vary the background color between the display box's inners when hovered and the display box's inners when active */
+  --momir-active-color-r: calc(var(--momir-hover-color-r) * var(--momir-active-color-var)); /* Display inner hover background color - Red value */
+  --momir-active-color-g: calc(var(--momir-hover-color-g) * var(--momir-active-color-var)); /* Display inner hover background color - Green value */
+  --momir-active-color-b: calc(var(--momir-hover-color-b) * var(--momir-active-color-var)); /* Display inner hover background color - Blue value */
+  --momir-active-color-a: var(--momir-hover-color-a); /* Display inner hover background color - Alpha value */
+  --momir-active-color: rgba(var(--momir-active-color-r), var(--momir-active-color-g), var(--momir-active-color-b), var(--momir-active-color-a)); /* Display inner hover background color */
+  --momir-active-color-full: rgba(var(--momir-active-color-r), var(--momir-active-color-g), var(--momir-active-color-b)); /* Display inner hover background color - Max alpha */
+  --momir-active-font-color: calc(( ( ( (var(--momir-active-color-r) * 299) + (var(--momir-active-color-g) * 587) + (var(--momir-active-color-b) * 114) ) / 1000 ) - 128 ) * -1000); /* Display inner hover font color */ /* ngl i hate that this makes it grey so uh */
+  --momir-active-font-color: white;
+  --momir-base-dark-var: 3; /* Amount to vary the background color between the display box's inners when hovered and the alternate display box's inners when hovered */
+  --momir-base-dark-r: calc(var(--momir-hover-color-r) * var(--momir-base-dark-var)); /* Display alt hover background color - Red value */
+  --momir-base-dark-g: calc(var(--momir-hover-color-g) * var(--momir-base-dark-var)); /* Display alt inner hover background color - Green value */
+  --momir-base-dark-b: calc(var(--momir-hover-color-b) * var(--momir-base-dark-var)); /* Display alt inner hover background color - Blue value */
+  --momir-base-dark-a: var(--momir-hover-color-a); /* Display alt inner hover background color - Alpha value */
+  --momir-base-dark: rgba(var(--momir-base-dark-r), var(--momir-base-dark-g), var(--momir-base-dark-b), var(--momir-base-dark-a)); /* Display alt inner hover background color */
+  --momir-base-dark-full: rgba(var(--momir-base-dark-r), var(--momir-base-dark-g), var(--momir-base-dark-b)); /* Display alt inner hover background color - Max alpha */
+  --momir-base-dark-font-color: calc(( ( ( (var(--momir-base-dark-r) * 299) + (var(--momir-base-dark-g) * 587) + (var(--momir-base-dark-b) * 114) ) / 1000 ) - 128 ) * -1000); /* Display alt inner hover font color */ /* ngl i hate that this makes it grey so uh */
+  --momir-base-dark-font-color: black;
+  --momir-border-color-var: 0; /* Amount to vary the border color from the base color */
+  --momir-border-color-r: calc(var(--momir-base-r) * 0.3); /* Border color - Red value */
+  --momir-border-color-g: calc(var(--momir-base-g) * 0.4); /* Border color - Green value */
+  --momir-border-color-b: calc(var(--momir-base-b) * 0.2); /* Border color - Blue value */
+  --momir-border-color-a: var(--momir-base-a); /* Border color - Alpha value */
+  --momir-border-color: rgba(var(--momir-border-color-r), var(--momir-border-color-g), var(--momir-border-color-b), var(--momir-border-color-a)); /* Border background color */
+  --momir-border-color-full: rgba(var(--momir-border-color-r), var(--momir-border-color-g), var(--momir-border-color-b)); /* Border color - Max alpha */
+  --momir-border-font-color: calc(( ( ( (var(--momir-border-color-r) * 299) + (var(--momir-border-color-g) * 587) + (var(--momir-border-color-b) * 114) ) / 1000 ) - 128 ) * -1000); /* Border font color */ /* ngl i hate that this makes it grey so uh */
+  --momir-border-font-color: black;
+  --momir-selected-color: yellow; /* Highlight color for selected card */
+	/* MoJhoSto Variables */
+  --mjs-color-r: 86; /* Card text background color - Red value */
+  --mjs-color-g: 86; /* Card text background color - Green value */
+  --mjs-color-b: 173; /* Card text background color - Blue value */
+  --mjs-color-a: 0.8; /* Card text background color - Alpha value */
+  --mjs-color: rgba(var(--mjs-color-r), var(--mjs-color-g), var(--mjs-color-b), var(--mjs-color-a)); /* Card text background color */
+  --mjs-color-full: rgba(var(--mjs-color-r), var(--mjs-color-g), var(--mjs-color-b)); /* Card text background color - Max alpha */
+  --mjs-top-image: url(null); /* Card text background image - Top */
+  --mjs-bottom-image: url(null); /* Card text background image - Bottom */
+  --mjs-font-color: calc(( ( ( (var(--mjs-color-r) * 299) + (var(--mjs-color-g) * 587) + (var(--mjs-color-b) * 114) ) / 1000 ) - 128 ) * -1000); /* Card text font color */ /* ngl i hate that this makes it grey so uh */
+  --mjs-font-color: black;
+  --mjs-base-v: 1.1; /* Amount to vary the background color between the card and the display box */
+  --mjs-base-r: calc(var(--mjs-color-r) * var(--mjs-base-v)); /* Display box background color - Red value */
+  --mjs-base-g: calc(var(--mjs-color-g) * var(--mjs-base-v)); /* Display box background color - Green value */
+  --mjs-base-b: calc(var(--mjs-color-b) * var(--mjs-base-v)); /* Display box background color - Blue value */
+  --mjs-base-a: var(--mjs-color-a); /* Display box background color - Alpha value */
+  --mjs-base: rgba(var(--mjs-base-r), var(--mjs-base-g), var(--mjs-base-b), var(--mjs-base-a)); /* Display box background color */
+  --mjs-base-full: rgba(var(--mjs-base-r), var(--mjs-base-g), var(--mjs-base-b)); /* Display box background color - Max alpha */
+  --mjs-base-font-color: calc(( ( ( (var(--mjs-base-r) * 299) + (var(--mjs-base-g) * 587) + (var(--mjs-base-b) * 114) ) / 1000 ) - 128 ) * -1000); /* Display box font color */ /* ngl i hate that this makes it grey so uh */
+  --mjs-base-font-color: black;
+  --mjs-button-color-var: 0.33; /* Amount to vary the background color between the display box and the display box's inners */
+  --mjs-button-color-r: calc(var(--mjs-base-r) * var(--mjs-button-color-var)); /* Display inner background color - Red value */
+  --mjs-button-color-g: calc(var(--mjs-base-g) * var(--mjs-button-color-var)); /* Display inner background color - Green value */
+  --mjs-button-color-b: calc(var(--mjs-base-b) * var(--mjs-button-color-var)); /* Display inner background color - Blue value */
+  --mjs-button-color-a: 0.5; /* Display inner background color - Alpha value */
+  --mjs-button-color: rgba(var(--mjs-button-color-r), var(--mjs-button-color-g), var(--mjs-button-color-b), var(--mjs-button-color-a)); /* Display inner background color */
+  --mjs-button-color-full: rgba(var(--mjs-button-color-r), var(--mjs-button-color-g), var(--mjs-button-color-b)); /* Display inner background color - Max alpha */
+  --mjs-button-font-color: calc(( ( ( (var(--mjs-button-color-r) * 299) + (var(--mjs-button-color-g) * 587) + (var(--mjs-button-color-b) * 114) ) / 1000 ) - 128 ) * -1000); /* Display inner font color */ /* ngl i hate that this makes it grey so uh */
+  --mjs-button-font-color: white;
+  --mjs-hover-color-var: 0.65; /* Amount to vary the background color between the display box's inners and the display box's inners when hovered */
+  --mjs-hover-color-r: calc(var(--mjs-button-color-r) * var(--mjs-hover-color-var)); /* Display inner hover background color - Red value */
+  --mjs-hover-color-g: calc(var(--mjs-button-color-g) * var(--mjs-hover-color-var)); /* Display inner hover background color - Green value */
+  --mjs-hover-color-b: calc(var(--mjs-button-color-b) * var(--mjs-hover-color-var)); /* Display inner hover background color - Blue value */
+  --mjs-hover-color-a: var(--mjs-button-color-a); /* Display inner hover background color - Alpha value */
+  --mjs-hover-color: rgba(var(--mjs-hover-color-r), var(--mjs-hover-color-g), var(--mjs-hover-color-b), var(--mjs-hover-color-a)); /* Display inner hover background color */
+  --mjs-hover-color-full: rgba(var(--mjs-hover-color-r), var(--mjs-hover-color-g), var(--mjs-hover-color-b)); /* Display inner hover background color - Max alpha */
+  --mjs-hover-font-color: calc(( ( ( (var(--mjs-hover-color-r) * 299) + (var(--mjs-hover-color-g) * 587) + (var(--mjs-hover-color-b) * 114) ) / 1000 ) - 128 ) * -1000); /* Display inner hover font color */ /* ngl i hate that this makes it grey so uh */
+  --mjs-hover-font-color: white;
+  --mjs-active-color-var: 0.5; /* Amount to vary the background color between the display box's inners when hovered and the display box's inners when active */
+  --mjs-active-color-r: calc(var(--mjs-hover-color-r) * var(--mjs-active-color-var)); /* Display inner hover background color - Red value */
+  --mjs-active-color-g: calc(var(--mjs-hover-color-g) * var(--mjs-active-color-var)); /* Display inner hover background color - Green value */
+  --mjs-active-color-b: calc(var(--mjs-hover-color-b) * var(--mjs-active-color-var)); /* Display inner hover background color - Blue value */
+  --mjs-active-color-a: var(--mjs-hover-color-a); /* Display inner hover background color - Alpha value */
+  --mjs-active-color: rgba(var(--mjs-active-color-r), var(--mjs-active-color-g), var(--mjs-active-color-b), var(--mjs-active-color-a)); /* Display inner hover background color */
+  --mjs-active-color-full: rgba(var(--mjs-active-color-r), var(--mjs-active-color-g), var(--mjs-active-color-b)); /* Display inner hover background color - Max alpha */
+  --mjs-active-font-color: calc(( ( ( (var(--mjs-active-color-r) * 299) + (var(--mjs-active-color-g) * 587) + (var(--mjs-active-color-b) * 114) ) / 1000 ) - 128 ) * -1000); /* Display inner hover font color */ /* ngl i hate that this makes it grey so uh */
+  --mjs-active-font-color: white;
+  --mjs-base-dark-var: 2.7; /* Amount to vary the background color between the display box's inners when hovered and the alternate display box's inners when hovered */
+  --mjs-base-dark-r: calc(var(--mjs-hover-color-r) * var(--mjs-base-dark-var)); /* Display alt hover background color - Red value */
+  --mjs-base-dark-g: calc(var(--mjs-hover-color-g) * var(--mjs-base-dark-var)); /* Display alt inner hover background color - Green value */
+  --mjs-base-dark-b: calc(var(--mjs-hover-color-b) * var(--mjs-base-dark-var)); /* Display alt inner hover background color - Blue value */
+  --mjs-base-dark-a: var(--mjs-hover-color-a); /* Display alt inner hover background color - Alpha value */
+  --mjs-base-dark: rgba(var(--mjs-base-dark-r), var(--mjs-base-dark-g), var(--mjs-base-dark-b), var(--mjs-base-dark-a)); /* Display alt inner hover background color */
+  --mjs-base-dark-full: rgba(var(--mjs-base-dark-r), var(--mjs-base-dark-g), var(--mjs-base-dark-b)); /* Display alt inner hover background color - Max alpha */
+  --mjs-base-dark-font-color: calc(( ( ( (var(--mjs-base-dark-r) * 299) + (var(--mjs-base-dark-g) * 587) + (var(--mjs-base-dark-b) * 114) ) / 1000 ) - 128 ) * -1000); /* Display alt inner hover font color */ /* ngl i hate that this makes it grey so uh */
+  --mjs-base-dark-font-color: black;
+  --mjs-border-color-var: 0; /* Amount to vary the border color from the base color */
+  --mjs-border-color-r: calc(var(--mjs-base-r) * 0.4); /* Border color - Red value */
+  --mjs-border-color-g: calc(var(--mjs-base-g) * 0.2); /* Border color - Green value */
+  --mjs-border-color-b: calc(var(--mjs-base-b) * 0.4); /* Border color - Blue value */
+  --mjs-border-color-a: var(--mjs-base-a); /* Border color - Alpha value */
+  --mjs-border-color: rgba(var(--mjs-border-color-r), var(--mjs-border-color-g), var(--mjs-border-color-b), var(--mjs-border-color-a)); /* Border background color */
+  --mjs-border-color-full: rgba(var(--mjs-border-color-r), var(--mjs-border-color-g), var(--mjs-border-color-b)); /* Border color - Max alpha */
+  --mjs-border-font-color: calc(( ( ( (var(--mjs-border-color-r) * 299) + (var(--mjs-border-color-g) * 587) + (var(--mjs-border-color-b) * 114) ) / 1000 ) - 128 ) * -1000); /* Border font color */ /* ngl i hate that this makes it grey so uh */
+  --mjs-border-font-color: black;
+  --mjs-selected-color: yellow; /* Highlight color for selected card */
+	/* Selectable Inputs */
+	--si-total-width: 270px;
+	--si-height: 20px;
+	--si-border-width: 1px;
+	--si-padding-width: 4px;
+	--si-arrow-padding: 24px;
+	--si-padding: var(--si-padding-width) var(--si-arrow-padding) var(--si-padding-width) var(--si-padding-width);
+	--si-margin-width: 4px;
+	--si-margin: var(--si-margin-width) var(--si-margin-width) var(--si-margin-width) var(--si-margin-width);
+	--si-calc-width: calc(var(--si-total-width) - calc(calc(2 * calc(var(--si-border-width)) + calc(var(--si-padding-width) + var(--si-arrow-padding)))));
+}
+
+p,
+div {
+  color: var(--dav-font-color);
+  text-shadow: 2px 2px 4px rgba(20, 20, 20, 0.25);
+}
+
+p.draft,
+div.draft {
+  color: var(--draft-font-color);
+  text-shadow: 2px 2px 4px rgba(20, 20, 20, 0.25);
+}
+
+p.momir,
+div.momir {
+  color: var(--momir-font-color);
+  text-shadow: 2px 2px 4px rgba(20, 20, 20, 0.25);
+}
+
+p.mjs,
+div.mjs {
+  color: var(--mjs-font-color);
+  text-shadow: 2px 2px 4px rgba(20, 20, 20, 0.25);
+}
+
+p {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+i {
+  text-shadow: 0 0 0 #000000;
+}
+
+body.dav-body {
+  background-color: transparent;
+	overflow-x: hidden;
+	overscroll-behavior: contain;
+	overflow-y: scroll;
+}
+
+a.link,
+span.link {
+  color: inherit;
+  text-decoration-line: underline;
+}
+
+a.link:hover,
+span.link:hover {
+  color: var(--dav-hover-color);
+  cursor: pointer;
+  text-decoration-line: underline;
+}
+
+a.link.draft:hover,
+span.link.draft:hover {
+  color: var(--draft-hover-color);
+  cursor: pointer;
+  text-decoration-line: underline;
+}
+
+a.link.momir:hover,
+span.link.momir:hover {
+  color: var(--momir-hover-color);
+  cursor: pointer;
+  text-decoration-line: underline;
+}
+
+a.link.mjs:hover,
+span.link.mjs:hover {
+  color: var(--mjs-hover-color);
+  cursor: pointer;
+  text-decoration-line: underline;
+}
+
+hr.middle {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+hr.top {
+  margin-top: 4px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+hr.bottom {
+  margin-top: 10px;
+  margin-bottom: 4px;
+  width: 100%;
+}
+
+hr.none {
+  margin-top: 4px;
+  margin-bottom: 4px;
+  width: 100%;
+}
+
+hr.px-1 {
+	margin: 1px 0 0 0;
+	height: 0px;
+}
+
+hr.px-2 {
+	margin: 2px 0 0 0;
+	height: 0px;
+}
+
+hr.px-3 {
+	margin: 3px 0 0 0;
+	height: 0px;
+}
+
+hr.px-4 {
+	margin: 4px 0 0 0;
+	height: 0px;
+}
+
+hr.px-5 {
+	margin: 5px 0 0 0;
+	height: 0px;
+}
+
+hr.px-6 {
+	margin: 6px 0 0 0;
+	height: 0px;
+}
+
+hr.px-7 {
+	margin: 7px 0 0 0;
+	height: 0px;
+}
+
+hr.px-8 {
+	margin: 8px 0 0 0;
+	height: 0px;
+}
+
+hr.px-9 {
+	margin: 9px 0 0 0;
+	height: 0px;
+}
+
+hr.px-10 {
+	margin: 10px 0 0 0;
+	height: 0px;
+}
+
+hr.break {
+	opacity: 0;
+}
+
+button {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.form-control.dav-form,
+.form-control.dav-form:focus,
+.dav-select,
+.dav-select:focus {
+  border: 1px black inset;
+  resize: none;
+  overflow: auto;
+  outline: none;
+  border-radius: 0px;
+  margin-bottom: 1px;
+  background-color: var(--dav-button-color);
+  color: var(--dav-button-font-color);
+}
+
+.form-control.draft-form,
+.form-control.draft-form:focus,
+.draft-select,
+.draft-select:focus {
+  border: 1px black inset;
+  resize: none;
+  overflow: auto;
+  outline: none;
+  border-radius: 0px;
+  margin-bottom: 1px;
+  background-color: var(--draft-button-color);
+  color: var(--draft-button-font-color);
+}
+
+.form-control.momir-form,
+.form-control.momir-form:focus,
+.momir-select,
+.momir-select:focus {
+  border: 1px black inset;
+  resize: none;
+  overflow: auto;
+  outline: none;
+  border-radius: 0px;
+  margin-bottom: 1px;
+  background-color: var(--momir-button-color);
+  color: var(--momir-button-font-color);
+}
+
+.form-control.mjs-form,
+.form-control.mjs-form:focus,
+.mjs-select,
+.mjs-select:focus {
+  border: 1px black inset;
+  resize: none;
+  overflow: auto;
+  outline: none;
+  border-radius: 0px;
+  margin-bottom: 1px;
+  background-color: var(--mjs-button-color);
+  color: var(--mjs-button-font-color);
+}
+
+select.dav-select,
+select.dav-select:focus,
+select.draft-select,
+select.draft-select:focus,
+select.momir-select,
+select.momir-select:focus,
+select.mjs-select,
+select.mjs-select:focus {
+	height: 40px;
+}
+
+textarea + label.dav-label,
+input + label.dav-label {
+  color: var(--dav-button-font-color);
+  opacity: 90%;
+}
+
+textarea + label.draft-label,
+input + label.draft-label {
+  color: var(--draft-button-font-color);
+  opacity: 90%;
+}
+
+textarea + label.momir-label,
+input + label.momir-label {
+  color: var(--momir-button-font-color);
+  opacity: 90%;
+}
+
+textarea + label.mjs-label,
+input + label.mjs-label {
+  color: var(--mjs-button-font-color);
+  opacity: 90%;
+}
+
+::selection {
+  background-color: var(--highlight-color);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--dav-hover-color-full);
+}
+
+/* Handle on focus */
+::-webkit-scrollbar-thumb:active {
+  background-color: var(--dav-active-color-full);
+}
+
+.center-x {
+  display: flex;
+  justify-content: center;
+}
+
+.center-y {
+  display: flex;
+  align-items: center;
+}
+
+.center-xy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dav-h {
+  font-family: Anton, fantasy;
+  color: var(--dav-base-font-color);
+  text-shadow: 2px 2px 2px rgba(20, 20, 20, 0.25);
+  margin-left: 2px;
+  margin-bottom: 0px;
+	width: auto;
+}
+
+.draft-h {
+  font-family: Anton, fantasy;
+  color: var(--draft-base-font-color);
+  text-shadow: 2px 2px 2px rgba(20, 20, 20, 0.25);
+  margin-left: 2px;
+  margin-bottom: 0px;
+	width: auto;
+}
+
+.momir-h {
+  font-family: Anton, fantasy;
+  color: var(--momir-base-font-color);
+  text-shadow: 2px 2px 2px rgba(20, 20, 20, 0.25);
+  margin-left: 2px;
+  margin-bottom: 0px;
+	width: auto;
+}
+
+.mjs-h {
+  font-family: Anton, fantasy;
+  color: var(--mjs-base-font-color);
+  text-shadow: 2px 2px 2px rgba(20, 20, 20, 0.25);
+  margin-left: 2px;
+  margin-bottom: 0px;
+	width: auto;
+}
+
+.dav-p, .draft-p, .momir-p, .mjs-p {
+  margin-left: 4px;
+  margin-right: 4px;
+  margin-bottom: 0px;
+}
+
+.disp-main {
+  width: 99%;
+}
+
+.disp-sub {
+  flex-wrap: wrap;
+  transition: all 0.45s ease-in;
+  width: 100%;
+}
+
+.disp-box-outer {
+  display: block;
+  width: var(--dav-width);
+  border-radius: 2px;
+  border-style: inset;
+  border-color: var(--dav-border-color-full);
+  background-color: var(--dav-base);
+  background-repeat: no-repeat;
+  background-size: 5%;
+}
+
+.disp-box-outer.draft {
+  display: block;
+  width: var(--dav-width);
+  border-radius: 2px;
+  border-style: inset;
+  border-color: var(--draft-border-color-full);
+  background-color: var(--draft-base);
+  background-repeat: no-repeat;
+  background-size: 5%;
+}
+
+.disp-box-outer.momir {
+  display: block;
+  width: var(--dav-width);
+  border-radius: 2px;
+  border-style: inset;
+  border-color: var(--momir-border-color-full);
+  background-color: var(--momir-base);
+  background-repeat: no-repeat;
+  background-size: 5%;
+}
+
+.disp-box-outer.mjs {
+  display: block;
+  width: var(--dav-width);
+  border-radius: 2px;
+  border-style: inset;
+  border-color: var(--mjs-border-color-full);
+  background-color: var(--mjs-base);
+  background-repeat: no-repeat;
+  background-size: 5%;
+}
+
+.disp-box-inner {
+  flex-direction: column;
+  margin: 1%;
+}
+
+.thumb-main  {
+	padding: 2.3px;
+  flex-wrap: wrap;
+}
+
+.thumb-text {
+	color: var(--dav-button-font-color);
+	width: 150px;
+}
+
+.thumb-text.draft {
+	color: var(--draft-button-font-color);
+	width: 150px;
+}
+
+.thumb-text.momir {
+	color: var(--momir-button-font-color);
+	width: 150px;
+}
+
+.thumb-text.mjs {
+	color: var(--mjs-button-font-color);
+	width: 150px;
+}
+
+.thumb-container {
+	border-radius: 1.25px;
+	border-color: var(--dav-border-color);
+	border-style: solid;
+	background-color: var(--dav-hover-color-full);
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	pointer-events: none;
+}
+
+.thumb-container.draft {
+	border-radius: 1.25px;
+	border-color: var(--draft-border-color);
+	border-style: solid;
+	background-color: var(--draft-hover-color-full);
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	pointer-events: none;
+}
+
+.thumb-container.momir {
+	border-radius: 1.25px;
+	border-color: var(--momir-border-color);
+	border-style: solid;
+	background-color: var(--momir-hover-color-full);
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	pointer-events: none;
+}
+
+.thumb-container.mjs {
+	border-radius: 1.25px;
+	border-color: var(--mjs-border-color);
+	border-style: solid;
+	background-color: var(--mjs-hover-color-full);
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	pointer-events: none;
+}
+
+.thumb-container.inactive {
+	border-color: var(--dav-active-color);
+	background-color: var(--dav-button-color);
+	cursor: pointer;
+	pointer-events: initial;
+}
+
+.thumb-container.inactive.draft {
+	border-color: var(--draft-active-color);
+	background-color: var(--draft-button-color);
+	cursor: pointer;
+	pointer-events: initial;
+}
+
+.thumb-container.inactive.momir {
+	border-color: var(--momir-active-color);
+	background-color: var(--momir-button-color);
+	cursor: pointer;
+	pointer-events: initial;
+}
+
+.thumb-container.inactive.mjs {
+	border-color: var(--mjs-active-color);
+	background-color: var(--mjs-button-color);
+	cursor: pointer;
+	pointer-events: initial;
+}
+
+.thumb-container.inactive:hover {
+	background-color: var(--dav-button-color-full);
+}
+
+.thumb-container.inactive.draft:hover {
+	background-color: var(--draft-button-color-full);
+}
+
+.thumb-container.inactive.momir:hover {
+	background-color: var(--momir-button-color-full);
+}
+
+.thumb-container.inactive.mjs:hover {
+	background-color: var(--mjs-button-color-full);
+}
+
+.thumb-container.inactive:active {
+	background-color: var(--dav-hover-color-full);
+}
+
+.thumb-container.inactive.draft:active {
+	background-color: var(--draft-hover-color-full);
+}
+
+.thumb-container.inactive.momir:active {
+	background-color: var(--momir-hover-color-full);
+}
+
+.thumb-container.inactive.mjs:active {
+	background-color: var(--mjs-hover-color-full);
+}
+
+.icon-container {
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.icon-subcontainer {
+	position: absolute;
+	top: 6px;
+	right: 12px;
+	height: 20px;
+	width: 20px;
+}
+
+i.type-toggle, i.settings {
+	color: var(--dav-button-color-full);
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	position: absolute;
+	top: 50%;
+}
+
+i.type-toggle.draft, i.settings.draft {
+	color: var(--draft-button-color-full);
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	position: absolute;
+	top: 50%;
+}
+
+i.type-toggle.momir, i.settings.momir {
+	color: var(--momir-button-color-full);
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	position: absolute;
+	top: 50%;
+}
+
+i.type-toggle.mjs, i.settings.mjs {
+	color: var(--mjs-button-color-full);
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	position: absolute;
+	top: 50%;
+}
+
+i.settings {
+	transition: transform 0.5s ease-in-out;
+}
+
+i.type-toggle:hover, i.settings:hover {
+	color: var(--dav-hover-color-full);
+}
+
+i.type-toggle.draft:hover, i.settings.draft:hover {
+	color: var(--draft-hover-color-full);
+}
+
+i.type-toggle.momir:hover, i.settings.momir:hover {
+	color: var(--momir-hover-color-full);
+}
+
+i.type-toggle.mjs:hover, i.settings.mjs:hover {
+	color: var(--mjs-hover-color-full);
+}
+
+i.type-toggle:active, i.settings:active {
+	color: var(--dav-active-color-full);
+}
+
+i.type-toggle.draft:active, i.settings.draft:active {
+	color: var(--draft-active-color-full);
+}
+
+i.type-toggle.momir:active, i.settings.momir:active {
+	color: var(--momir-active-color-full);
+}
+
+i.type-toggle.mjs:active, i.settings.mjs:active {
+	color: var(--mjs-active-color-full);
+}
+
+i.settings:hover {
+	transform: rotate(120deg);
+}
+
+i.settings:active {
+	transform: rotate(240deg);
+}
+
+.tooltip-base {
+	position: relative;
+}
+
+.tooltip-base .tooltip-text {
+	font: 13px Helvetica, sans-serif;
+  width: auto;
+	white-space: nowrap;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  top: -5px;
+  left: 110%;
+  opacity: 0;
+	pointer-events: none;
+  transition: opacity 0.15s;
+}
+
+.tooltip-base.type-toggle .tooltip-text {
+	top: -12px;
+	left: 140%;
+}
+
+.tooltip-base .tooltip-text::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent black transparent transparent;
+}
+
+.tooltip-base:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+.tooltip-base .tooltip-follow {
+    display: none;
+		pointer-events: none;
+		opacity: 0;
+}
+
+.tooltip-base:hover .tooltip-follow {
+    display: block;
+    position: fixed;
+    overflow: hidden;
+		opacity: 1;
+		z-index: 5;
+}
+
+.dav-card .tooltip-base:hover .tooltip-follow {
+	  display: none;
+		pointer-events: none;
+		opacity: 0;
+
+}
+
+.thumb {
+	height: 50px;
+	width: 67px;
+	z-index: 5;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.inactive .thumb  {
+	-webkit-filter: grayscale(80%); /* Safari 6.0 - 9.0 */
+	filter: grayscale(80%);
+}
+
+.inactive:hover .thumb {
+	-webkit-filter: grayscale(40%); /* Safari 6.0 - 9.0 */
+	filter: grayscale(40%);
+}
+
+.dav-img, .draft-img, .momir-img, .mjs-img {
+	height: 350px;
+	z-index: 5;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.dav-card-img {
+	display: none;
+	opacity: 0;
+	pointer-events: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.dav-card .tooltip-base:hover ~ .dav-card-img {
+	display: block;
+	opacity: 1;
+	pointer-events: inherit;
+	position: relative;
+	left: 50%;
+	top: 0;
+}
+
+.dav-img.mobile, .draft-img.mobile, .momir-img.mobile, .mjs-img.mobile {
+	display: none;
+	height: 0;
+	width: 0;
+}
+
+.dav-card.mobile .dav-card-img {
+	display: none;
+	opacity: 0;
+	pointer-events: none;
+}
+
+.dav-card.mobile .tooltip-base:hover ~ .dav-card-img {
+	display: none;
+	opacity: 0;
+	pointer-events: inherit;
+}
+
+.tooltip-base .tooltip-text.dav-img, .tooltip-base .tooltip-follow.dav-img, .tooltip-base .tooltip-text.draft-img, .tooltip-base .tooltip-follow.draft-img, .tooltip-base .tooltip-text.momir-img, .tooltip-base .tooltip-follow.momir-img, .tooltip-base .tooltip-text.mjs-img, .tooltip-base .tooltip-follow.mjs-img {
+	top: -15px;
+	left: 99%;
+	background-color: transparent;
+}
+
+.hidden, .dav-card .dav-text-only, .disp-box-inner .dav-card-only, .mobile .mobile-hidden {
+  visibility: hidden;
+  height: 0px;
+  pointer-events: none;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+	z-index: -100;
+}
+
+.hidden.type-toggle, .hidden.togglable, .hidden.thumb-container, .hidden.site-main, .dav-card .dav-text-only, .disp-box-inner .dav-card-only, .mobile .mobile-hidden {
+	width: 0px;
+	display: none;
+}
+
+.mobile-only {
+	display: none;
+}
+
+.mobile .mobile-only {
+	display: inherit;
+}
+
+.underlined {
+  text-decoration-line: underline;
+}
+
+.italics {
+	font-style: italic;
+}
+
+.grow {
+  transition: transform 0.2s ease-in-out;
+}
+
+.grow:hover {
+  transform: scale(1.1);
+}
+
+.grow-slight {
+  transition: transform 0.2s ease-in-out;
+}
+
+.grow-slight:hover {
+  transform: scale(1.05);
+}
+
+.grow-minimal {
+  transition: transform 0.2s ease-in-out;
+}
+
+.grow-minimal:hover {
+  transform: scale(1.02);
+}
+
+.grow-over-selected {
+  transition: transform 0.2s ease-in-out;
+}
+
+.grow-over-selected:hover {
+  transform: scale(1.06) !important;
+}
+
+.collapsible,
+.dav-button,
+.inner-button {
+  background-color: var(--dav-button-color-full);
+  color: var(--dav-button-font-color);
+  cursor: pointer;
+  border: none;
+  text-align: left;
+  outline: none;
+  margin-bottom: 1px;
+}
+
+.collapsible.draft,
+.draft-button,
+.inner-button.draft {
+  background-color: var(--draft-button-color-full);
+  color: var(--draft-button-font-color);
+  cursor: pointer;
+  border: none;
+  text-align: left;
+  outline: none;
+  margin-bottom: 1px;
+}
+
+.collapsible.momir,
+.momir-button,
+.inner-button.momir {
+  background-color: var(--momir-button-color-full);
+  color: var(--momir-button-font-color);
+  cursor: pointer;
+  border: none;
+  text-align: left;
+  outline: none;
+  margin-bottom: 1px;
+}
+
+.collapsible.mjs,
+.mjs-button,
+.inner-button.mjs {
+  background-color: var(--mjs-button-color-full);
+  color: var(--mjs-button-font-color);
+  cursor: pointer;
+  border: none;
+  text-align: left;
+  outline: none;
+  margin-bottom: 1px;
+}
+
+.collapsible,
+.dav-button,
+.draft-button,
+.momir-button,
+.mjs-button  {
+  padding: 10px;
+  width: 100%;
+  font: 15px Helvetica, sans-serif;
+}
+
+.inner-button {
+  padding: 5px 4px;
+  width: 50%;
+  margin-left: 1px;
+  margin-right: 1px;
+  font: 13px Helvetica, sans-serif;
+  text-align: center;
+}
+
+.active,
+.collapsible:hover,
+.dav-button:hover,
+.inner-button:hover {
+  background-color: var(--dav-hover-color-full);
+  color: var(--dav-hover-font-color);
+}
+
+.active.draft,
+.collapsible.draft:hover,
+.draft-button:hover,
+.inner-button.draft:hover {
+  background-color: var(--draft-hover-color-full);
+  color: var(--draft-hover-font-color);
+}
+
+.active.momir,
+.collapsible.momir:hover,
+.momir-button:hover,
+.inner-button.momir:hover {
+  background-color: var(--momir-hover-color-full);
+  color: var(--momir-hover-font-color);
+}
+
+.active.mjs-button,
+.collapsible.mjs-button:hover,
+.mjs-button:hover,
+.inner-button.mjs-button:hover {
+  background-color: var(--mjs-hover-color-full);
+  color: var(--mjs-hover-font-color);
+}
+
+.collapsible:active,
+.dav-button:active,
+.inner-button:active {
+  background-color: var(--dav-active-color-full);
+  color: var(--dav-active-font-color);
+}
+
+.collapsible.draft:active,
+.draft-button:active,
+.inner-button.draft:active {
+  background-color: var(--draft-active-color-full);
+  color: var(--draft-active-font-color);
+}
+
+.collapsible.momir:active,
+.momir-button:active,
+.inner-button.momir:active {
+  background-color: var(--momir-active-color-full);
+  color: var(--momir-active-font-color);
+}
+
+.collapsible.mjs:active,
+.mjs-button:active,
+.inner-button.mjs:active {
+  background-color: var(--mjs-active-color-full);
+  color: var(--mjs-active-font-color);
+}
+
+.off,
+.placeholder {
+  pointer-events: none;
+  opacity: 85%;
+}
+
+.off.inner-button {
+  opacity: 100%;
+  background-color: var(--dav-hover-color-full);
+}
+
+.off.inner-button.draft {
+  opacity: 100%;
+  background-color: var(--draft-hover-color-full);
+}
+
+.off.inner-button.momir {
+  opacity: 100%;
+  background-color: var(--momir-hover-color-full);
+}
+
+.off.inner-button.mjs {
+  opacity: 100%;
+  background-color: var(--mjs-hover-color-full);
+}
+
+.content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #f1f1f1;
+}
+
+.content p {
+  padding: 0 16px;
+}
+
+.dav-card {
+  margin: 1.5% 0.777% 0.777% 0.777%;
+  border-top-left-radius: var(--dav-top-radius);
+  border-top-right-radius: var(--dav-top-radius);
+  border-bottom-left-radius: var(--dav-bottom-radius-maj) var(--dav-bottom-radius-min);
+  border-bottom-right-radius: var(--dav-bottom-radius-maj) var(--dav-bottom-radius-min);
+  border: var(--dav-border-width) solid black;
+  height: var(--dav-height);
+  width: var(--dav-width);
+  background-image: url("https://pbs.twimg.com/media/E7U56abUcAA78iW.jpg");
+  background-size: cover;
+  cursor: default;
+  z-index: 2;
+}
+
+.dav-card-top {
+  border: var(--dav-border-width) solid black;
+  border-top-left-radius: var(--dav-top-radius);
+  border-top-right-radius: var(--dav-top-radius);
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  height: var(--dav-top-height);
+  width: var(--dav-width);
+  background: var(--dav-color);
+	background-image: var(--dav-top-image);
+  top: calc(-1*var(--dav-border-width));
+  left: calc(-1*var(--dav-border-width));
+  position: relative;
+  margin-bottom: 0 !important;
+  flex-direction: row;
+}
+
+.dav-card-bottom {
+  border: var(--dav-border-width) solid black;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: var(--dav-bottom-radius-maj) var(--dav-bottom-radius-min);
+  border-bottom-right-radius: var(--dav-bottom-radius-maj) var(--dav-bottom-radius-min);
+  height: calc(var(--dav-bottom-height) * var(--dav-height));
+  width: var(--dav-width);
+  background: var(--dav-color);
+  top: calc(var(--dav-bottom-height) * var(--dav-height));
+  left: calc(-1 * var(--dav-border-width));
+  position: relative;
+}
+
+.dav-card-bottom-left-boundary {
+  shape-outside: polygon(0 0, 10% 0, 10% 50%, 25% 80%, 45% 90%, 100% 100%, 0 100%);
+  float: left;
+  height: calc(var(--dav-bottom-height) * var(--dav-height));
+  width: calc(var(--dav-width) * 0.5);
+}
+
+.dav-card-bottom-right-boundary {
+  shape-outside: polygon(45% 90%, 75% 80%, 90% 45%, 90% 0, 100% 0, 100% 100%, 0 100%);
+  float: right;
+  height: calc(var(--dav-bottom-height) * var(--dav-height));
+  width: calc(var(--dav-width) * 0.48);
+}
+
+.dav-card-header {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  font: var(--dav-top-font-size) Anton, fantasy;
+  font-weight: bold;
+  line-height: 1.15;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.dav-card-text {
+  margin-top: calc(var(--dav-height) / 15.714);
+  text-align: center;
+  font: var(--dav-bottom-font-size) Helvetica, sans-serif;
+  word-wrap: break-word;
+}
+
+.dav-card-main {
+  width: 99%;
+}
+
+.dav-card-sub {
+  flex-wrap: wrap;
+  transition: all 0.45s ease-in;
+  width: 100%;
+}
+
+.selected {
+  transform: scale(1.03);
+  box-shadow: 0px 0px 5px 5px var(--dav-selected-color);
+  z-index: 3 !important;
+}
+
+.searchable-input {
+	font: 15px Helvetica, sans-serif;
+	color: black;
+	width: var(--si-calc-width);
+	height: var(--si-height);
+	padding: var(--si-padding);
+	margin: var(--si-margin);
+  border: var(--si-border-width) black inset;
+  resize: none;
+  overflow: auto;
+  outline: none;
+  border-radius: 0px;
+	cursor: default;
+	background-image: url("https://i.imgur.com/r5scGNc.png");
+	background-repeat: no-repeat;
+	background-position: right top;
+	background-attachment: scroll;
+	background-size: contain;
+}
+
+.searchable-input.white-arrow  {
+	background-image: url("https://i.imgur.com/eMCAvh6.png");
+}
+
+.searchable-input:focus, .searchable-input:active {
+	cursor: auto;
+}
+
+.option-container {
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.option-list, .option-list:active {
+	font: 15px Helvetica, sans-serif;
+	opacity: 0;
+	visibility: hidden;
+	display: none;
+	height: 0px;
+	width: 0px;
+	z-index: 5;
+}
+
+.option-list:hover, .searchable-input:focus ~ .option-container > .option-list {
+	opacity: inherit;
+	visibility: visible;
+	display: block;
+	position: absolute;
+	background-color: rgb(117, 117, 117);
+	margin: 0px var(--si-margin-width);
+	width: var(--si-total-width);
+	height: auto;
+	max-height: 300px;
+	overflow: auto;
+	top: 52px;
+	right: 0px;
+	z-index: 5;
+}
+
+p.option {
+	color: white;
+	background-color: rgb(133, 133, 133);
+	padding: 4px;
+	margin: 0px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	z-index: 5;
+}
+
+p.option:nth-of-type(odd) {
+	background-color: rgb(117, 117, 117);
+}
+
+p.option.hovered {
+	background-color: blue;
+}
+
+.hidden.option {
+	display: none;
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+}
+
+.mana-text {
+  text-indent: -999em;
+  overflow: hidden;
+  max-height: 19px;
+  max-width: 19px;
+  font-size: 0px;
+}
+
+.ms {
+  vertical-align: baseline !important;
+}
+
+*[class^="ms-loyalty-"],
+*[class*=" ms-loyalty-"] {
+  top: 0.15em;
+  max-height: 21px;
+}
+
+*[class^="ms-loyalty-"] > .mana-text,
+*[class*=" ms-loyalty-"] > .mana-text {
+  max-height: 21px;
+  max-width: 21px;
+}
+
+*[class^="ms-saga-"],
+*[class*=" ms-saga-"] {
+  top: 0.25em;
+  max-height: 14.19px;
+  transform: matrix(1.2, 0, 0, 1.2, 0, 2) !important;
+}
+
+*[class^="ms-saga-"] > .mana-text,
+*[class*=" ms-saga-"] > .mana-text {
+  max-height: 12px;
+  max-width: 12px;
+}
+
+.ms.ms-cost {
+  margin-left: inherit !important;
+}
+
+/* Mobile Styles */
+
+.dav-card.mobile {
+	margin: 2% 1.333% 0.333% 1.333%;
+	border-top-left-radius: var(--dav-top-radius);
+	border-top-right-radius: var(--dav-top-radius);
+	border-bottom-left-radius: var(--dav-mobile-bottom-radius-maj) var(--dav-mobile-bottom-radius-min);
+	border-bottom-right-radius: var(--dav-mobile-bottom-radius-maj) var(--dav-mobile-bottom-radius-min);
+	border: none;
+	height: var(--dav-mobile-height);
+	width: var(--dav-width);
+	background-image: none;
+	background-color: transparent;
+	cursor: default;
+	z-index: 2;
+}
+
+.dav-card-top.mobile {
+	border: var(--dav-border-width) solid black;
+	border-top-left-radius: var(--dav-top-radius);
+	border-top-right-radius: var(--dav-top-radius);
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+	height: calc(var(--dav-mobile-top-height) * var(--dav-mobile-height));
+	width: var(--dav-width);
+	background: var(--dav-color);
+	background-image: var(--dav-top-image);
+	top: inherit;
+	left: inherit;
+	position: relative;
+	margin-bottom: 0 !important;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.dav-card-bottom.mobile {
+	border-top: none;
+	border-left: var(--dav-border-width) solid black;
+	border-right: var(--dav-border-width) solid black;
+	border-bottom: var(--dav-border-width) solid black;
+	border-top-left-radius: 0px;
+	border-top-right-radius: 0px;
+	border-bottom-left-radius: var(--dav-mobile-bottom-radius-maj) var(--dav-mobile-bottom-radius-min);
+	border-bottom-right-radius: var(--dav-mobile-bottom-radius-maj) var(--dav-mobile-bottom-radius-min);
+	height: calc(var(--dav-mobile-bottom-height) * var(--dav-mobile-height));
+	width: var(--dav-width);
+	background: var(--dav-color);
+	background-image: var(--dav-bottom-image);
+	top: inherit;
+	left: inherit;
+	bottom: 0;
+	position: relative;
+	overflow: auto;
+	margin-top: 0 !important;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.dav-card-bottom-left-boundary.mobile {
+	shape-outside: none;
+	display: none;
+	height: 0px;
+	width: 0px;
+}
+
+.dav-card-bottom-right-boundary.mobile {
+	shape-outside: none;
+	display: none;
+	height: 0px;
+	width: 0px;
+}
+
+.dav-card-header.mobile {
+	padding: 0;
+	margin: 0;
+	text-align: center;
+	font: var(--dav-mobile-top-font-size) Anton, fantasy;
+	font-weight: bold;
+	line-height: 1.1;
+}
+
+.dav-card-text.mobile {
+	margin-top: 0px;
+	margin-left: 1%;
+	margin-right: 1%;
+	text-align: center;
+	font: var(--dav-mobile-bottom-font-size) Helvetica, sans-serif;
+	word-wrap: break-word;
+}
+
+.selected.mobile {
+	transform: scale(1.02);
+	box-shadow: 0px 0px 5px 5px var(--dav-selected-color);
+	z-index: 3 !important;
+}
+
+.grow-slight.mobile:hover {
+	transform: scale(1.02);
+}
+
+.grow-minimal.mobile:hover {
+	transform: scale(1.01);
+}
+
+.grow-over-selected.mobile:hover {
+	transform: scale(1.04) !important;
+}
