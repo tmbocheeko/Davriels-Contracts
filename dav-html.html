@@ -1,0 +1,245 @@
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+  <link href="//cdn.jsdelivr.net/npm/mana-font@latest/css/mana.css" rel="stylesheet" type="text/css" />
+  <link href='https://fonts.googleapis.com/css?family=Anton' rel='stylesheet'>
+  <script src="https://kit.fontawesome.com/a405ff56cd.js" crossorigin="anonymous"></script>
+
+  <title>Davriel's Contracts & More</title>
+</head>
+
+<body class="dav-body">
+	
+	<div style="display: flex; justify-content: center;" spellcheck=”false”>
+		<input id="yourIDHere" class="searchable-input" onfocus="this.select(); unhide('.option')" spellcheck=”false”>
+		<div class="option-container">
+			<div class="option-list" for-input="yourIDHere">
+				<p class="option">Option Text</p>
+			</div>
+		</div>
+	</div>
+	  <div id="typeSelMain" class="placeholder-wave disp-main center-x m-0 pt-2">
+    <div id="typeSelSub" class="placeholder disp-sub center-x m-0 p-0">
+      <div class="thumb-main center-x">
+        <div class="thumb-container dav center-y" data-siteId="davDiv">
+          <div class="thumb" style="background-image: url(https://i.imgur.com/eDhx8uj.png); background-size: cover;" onselectstart="return false"></div>
+          <div class="thumb-text dav center-x center-y p-1">
+            Davriel's Contracts
+          </div>
+        </div>
+        <div class="thumb-container draft center-y inactive" data-siteId="draftDiv">
+          <div class="thumb" style="background-image: url(https://i.imgur.com/lGSzD7S.png); background-size: cover;" onselectstart="return false"></div>
+          <div class="thumb-text draft center-x center-y p-1">
+            Spellbook Drafting
+          </div>
+        </div>
+        <div class="thumb-container momir center-y inactive" data-siteId="momirDiv">
+          <div class="thumb" style="background-image: url(https://i.imgur.com/CxYWVXZ.png); background-size: cover;" onselectstart="return false"></div>
+          <div class="thumb-text momir center-x center-y p-1">
+            Momir Basic
+          </div>
+        </div>
+        <div class="thumb-container mjs center-y inactive" data-siteId="mjsDiv">
+          <div class="thumb" style="background-image: url(https://i.imgur.com/irWpHxD.png); background-size: cover;" onselectstart="return false"></div>
+          <div class="thumb-text mjs center-x center-y p-1">
+            MoJhoSto
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="davDiv" class="site-main">
+    <div id="davMain" class="disp-main center-x m-0 pt-2">
+      <div id="davSub" class="disp-sub center-x m-0 p-0">
+        <div class="disp-box-outer dav placeholder-wave m-0 p-0">
+          <div id="dispDavHome" class="placeholder disp-box-inner center-x">
+            <div class="icon-container">
+              <div class="icon-subcontainer center-x">
+                <i id="settings" class="fa-solid fa-gear fa-xl settings dav"></i>
+              </div>
+            </div>
+            <h3 id="davTitleH" class="dav-h"><a id="davTitle" href="https://scryfall.com/card/j21/15/davriel-soul-broker" class="link dav tooltip-base" target="_blank" rel="noopener noreferrer">Davriel's Contracts<img class="dav-img tooltip-follow center-x" src="https://media.wizards.com/2021/images/daily/dsb_73ssdgg2_new.png"></a></h3>
+            <p class="dav-p">Accept one of Davriel's <span class="link dav link-offers">offers</span>, then accept one of Davriel's <span class="link dav link-conditions">conditions.</span></p>
+            <div>
+              <hr class="top">
+              <button id="davAllBtn" class="collapsible off">All Chosen Offers & Conditions 📚</button>
+              <div id="davAllDispMain" class="content">
+                <div class="center-x">
+                  <button id="davResetAllBtn" class="inner-button off">By Order Chosen</button>
+                  <button id="davEmblemBtn" class="inner-button">Cumulative Emblems</button>
+                </div>
+                <hr class="px-8 break">
+                <div id="davAllDisp" class="ib-togglable"></div>
+                <div id="davEmblemDisp" class="ib-togglable hidden"></div>
+              </div>
+              <button id="davCurrentBtn" class="collapsible off">Current Contract 📜</button>
+              <div class="content">
+                <hr class="px-8 break">
+                <div id="davCurrentDisp"></div>
+              </div>
+            </div>
+            <hr class="middle">
+            <button id="runDav" class="dav-button">Start a new contract 🖊️</button>
+          </div>
+          <div id="dispDavOffers" class="disp-box-inner center-x hidden"></div>
+          <div id="dispDavConditions" class="disp-box-inner center-x hidden"></div>
+          <div id="dispDavEditable" class="disp-box-inner center-x hidden">
+            <div class="icon-container">
+              <div class="icon-subcontainer center-x">
+                <i id="desktopToggle" class="fa-solid fa-desktop fa-xl type-toggle dav tooltip-base"><span class="tooltip-text">Desktop Mode</span></i>
+                <i id="mobileToggle" class="fa-solid fa-mobile-screen-button fa-xl type-toggle dav hidden tooltip-base"><span class="tooltip-text">Mobile Mode</span></i>
+              </div>
+            </div>
+            <h3 class="dav-h"><span class="underlined">Customize Contracts</span></h3>
+            <hr class="px-6">
+            <button class="dav-button link-home"><strong>←</strong> Back</button>
+            <hr class="middle">
+            <h5 class="dav-h">Presets</h5>
+            <select id="presetCustom" class="dav-select"></select>
+            <button id="submitPresetCustom" class="dav-button submit-button">Submit</button>
+            <hr class="middle">
+            <h5 class="dav-h">Link (Direct link to raw text)</h5>
+            <div class="form-floating">
+              <input id="offerLinkCustom" type="text" class="form-control dav-form shadow-none" placeholder="pastebin.com" value="https://pastebin.com/raw/xZU7reYi" onfocus="this.select();">
+              <label for="offerLinkCustom" class="dav-label">Offer Link</label>
+            </div>
+            <div class="form-floating">
+              <input id="conditionLinkCustom" type="text" class="form-control dav-form shadow-none" placeholder="pastebin.com" value="https://pastebin.com/raw/FTMSCm1v" onfocus="this.select();">
+              <label for="conditionLinkCustom" class="dav-label">Offer Link</label>
+            </div>
+            <button id="submitLinkCustom" class="dav-button submit-button">Submit</button>
+            <hr class="middle">
+            <h5 class="dav-h">Text (Split by new lines)</h5>
+            <div class="form-floating">
+              <textarea id="offerTextCustom" type="text" class="form-control dav-form shadow-none" placeholder="pastebin.com" value="https://pastebin.com/raw/xZU7reYi" onfocus="this.select();"></textarea>
+              <label for="offerTextCustom" class="dav-label">Offer Text</label>
+            </div>
+            <div class="form-floating">
+              <textarea id="conditionTextCustom" type="text" class="form-control dav-form shadow-none" placeholder="pastebin.com" value="https://pastebin.com/raw/FTMSCm1v" onfocus="this.select();"></textarea>
+              <label for="conditionTextCustom" class="dav-label">Condition Text</label>
+            </div>
+            <button id="submitTextCustom" class="dav-button submit-button">Submit</button>
+            <hr class="middle">
+            <button class="dav-button link-home"><strong>←</strong> Back</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="cardMain" class="dav-card-main center-x m-0 p-0">
+      <div id="cardSub" class="dav-card-sub center-x m-0 p-0" style="visibility: hidden; opacity: 0%;">
+        <div class="dav-card grow-slight" onselectstart="return false">
+          <div class="dav-card-top center-x">
+            <p class="dav-card-header">
+            </p>
+          </div>
+          <div class="dav-card-bottom">
+            <div class="dav-card-bottom-left-boundary"></div>
+            <div class="dav-card-bottom-right-boundary"></div>
+            <p class="dav-card-text"></p>
+          </div>
+        </div>
+        <div class="dav-card grow-slight" onselectstart="return false">
+          <div class="dav-card-top center-x">
+            <p class="dav-card-header">
+            </p>
+          </div>
+          <div class="dav-card-bottom">
+            <div class="dav-card-bottom-left-boundary"></div>
+            <div class="dav-card-bottom-right-boundary"></div>
+            <p class="dav-card-text"></p>
+          </div>
+        </div>
+        <div class="dav-card grow-slight" onselectstart="return false">
+          <div class="dav-card-top center-x">
+            <p class="dav-card-header">
+            </p>
+          </div>
+          <div class="dav-card-bottom">
+            <div class="dav-card-bottom-left-boundary"></div>
+            <div class="dav-card-bottom-right-boundary"></div>
+            <p class="dav-card-text"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p></p>
+    <p></p>
+  </div>
+
+  <div id="draftDiv" class="site-main">
+    <div id="draftMain" class="disp-main center-x m-0 pt-2">
+      <div id="draftSub" class="disp-sub center-x m-0 p-0">
+        <div class="disp-box-outer draft m-0 p-0">
+          <div class="disp-box-inner">
+            <h3 class="draft-h">Spellbook Drafting</h3>
+            <p class="draft-p">Draft a card from the spellbook of the chosen card.</p>
+            <hr class="top">
+            <div class="center-x">
+              <input id="draftCardName" class="searchable-input" onfocus="this.select(); unhide('.option')" spellcheck=”false”>
+              <div class="option-container">
+                <div class="option-list" for-input="draftCardName">
+                  <p class="option">Ishkanah, Broodmother</p>
+                  <p class="option">Tibalt, Wicked Tormentor</p>
+                  <p class="option">Gitrog, Horror of Zhava</p>
+                  <p class="option">Tireless Angler</p>
+                </div>
+              </div>
+            </div>
+            <button class="draft-button">Draft a card .3.</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="momirDiv" class="site-main">
+    <div id="momirMain" class="disp-main center-x m-0 pt-2">
+      <div id="momirSub" class="disp-sub center-x m-0 p-0">
+        <div class="disp-box-outer momir m-0 p-0">
+          <div class="disp-box-inner">
+            <h3 class="momir-h">Momir Basic</h3>
+            <p class="momir-p">WIP</p>
+            <hr class="top">
+            <button id="momirColl1" class="collapsible momir">Collapsible 1</button>
+            <div id="momirContent1" class="content">
+              <p class="momir-p">Test Collapsible 1</p>
+            </div>
+            <button id="momirColl2" class="collapsible momir">Collapsible 2</button>
+            <div id="momirContent2" class="content">
+              <p class="momir-p">Test Collapsible 2</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="mjsDiv" class="site-main">
+    <div id="mjsMain" class="disp-main center-x m-0 pt-2">
+      <div id="mjsSub" class="disp-sub center-x m-0 p-0">
+        <div class="disp-box-outer mjs m-0 p-0">
+          <div class="disp-box-inner">
+            <h3 class="mjs-h">MoJhoSto</h3>
+            <p class="mjs-p">WIP</p>
+            <hr class="top">
+            <button id="mjsColl1" class="collapsible mjs">Collapsible 1</button>
+            <div id="mjsContent1" class="content">
+              <p class="mjs-p">Test Collapsible 1</p>
+            </div>
+            <button id="mjsColl2" class="collapsible mjs">Collapsible 2</button>
+            <div id="mjsContent2" class="content">
+              <p class="mjs-p">Test Collapsible 2</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+</body>
