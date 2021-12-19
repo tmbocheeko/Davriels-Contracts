@@ -3,8 +3,6 @@ Simulator for Davriel's Soul Broker's contracts and other MTG Arena exclusive me
 
 By [tmbocheeko](https://www.twitter.com/tmbocheeko_).
 
-See it in action [here](https://jsfiddle.net/tmbocheeko/j5crh3od/latest).
-
 ## Using this in your project
 
 ### Import this
