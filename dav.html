@@ -9,293 +9,385 @@
   <script src="https://kit.fontawesome.com/a405ff56cd.js" crossorigin="anonymous"></script>
   <link href="https://cdn.jsdelivr.net/gh/tmbocheeko/searchable-inputs@v1.3/searchableinputs.css" rel="stylesheet" type="text/css" />
   <!-- DAV CSS -->
-  <link href="https://cdn.jsdelivr.net/gh/tmbocheeko/Davriels-Contracts@v0.2/dav.css" rel="stylesheet" type="text/css" />
+  <link href="https://cdn.jsdelivr.net/gh/tmbocheeko/Davriels-Contracts@v0.3/dav.css" rel="stylesheet" type="text/css" />
   <title>Davriel's Contracts & More</title>
 </head>
 
 <body class="dav-body">
-  <div id="typeSelMain" class="placeholder-wave disp-main center-x m-0 pt-2">
-    <div id="typeSelSub" class="placeholder disp-sub center-x m-0 p-0">
-      <div class="thumb-main center-x">
-        <div class="thumb-container dav center-y" data-siteId="davDiv">
-          <div class="thumb" style="background-image: url(https://i.imgur.com/eDhx8uj.png); background-size: cover;" onselectstart="return false"></div>
-          <div class="thumb-text dav center-x center-y p-1">
-            Davriel's Contracts
-          </div>
-        </div>
-        <div class="thumb-container draft center-y inactive" data-siteId="draftDiv">
-          <div class="thumb" style="background-image: url(https://i.imgur.com/lGSzD7S.png); background-size: cover;" onselectstart="return false"></div>
-          <div class="thumb-text draft center-x center-y p-1">
-            Spellbook Drafting
-          </div>
-        </div>
-        <div class="thumb-container momir center-y inactive" data-siteId="momirDiv">
-          <div class="thumb" style="background-image: url(https://i.imgur.com/CxYWVXZ.png); background-size: cover;" onselectstart="return false"></div>
-          <div class="thumb-text momir center-x center-y p-1">
-            Momir Basic
-          </div>
-        </div>
-        <div class="thumb-container mjs center-y inactive" data-siteId="mjsDiv">
-          <div class="thumb" style="background-image: url(https://i.imgur.com/irWpHxD.png); background-size: cover;" onselectstart="return false"></div>
-          <div class="thumb-text mjs center-x center-y p-1">
-            MoJhoSto
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+	<div class="is-style-wide dav-site">
+		<div id="typeSelMain" class="placeholder-wave disp-main center-x m-0 pt-2 is-style-wide">
+			<div id="typeSelSub" class="placeholder disp-sub center-x m-0 p-0">
+				<div class="thumb-main center-x">
+					<div class="thumb-container dav center-y" data-siteId="davDiv">
+						<div class="thumb" style="background-image: url(https://tmbo.xyz/wp-content/uploads/2022/05/dav-thumb.png); background-size: cover;" onselectstart="return false"></div>
+						<div class="thumb-text dav center-x center-y p-1">
+							Davriel's Contracts
+						</div>
+					</div>
+					<div class="thumb-container draft center-y inactive" data-siteId="draftDiv">
+						<div class="thumb" style="background-image: url(https://tmbo.xyz/wp-content/uploads/2022/05/draft-thumb.png); background-size: cover;" onselectstart="return false"></div>
+						<div class="thumb-text draft center-x center-y p-1">
+							Spellbook Drafting
+						</div>
+					</div>
+					<div class="thumb-container momir center-y inactive" data-siteId="momirDiv">
+						<div class="thumb" style="background-image: url(https://tmbo.xyz/wp-content/uploads/2022/05/momir-thumb.png); background-size: cover;" onselectstart="return false"></div>
+						<div class="thumb-text momir center-x center-y p-1">
+							Momir Basic
+						</div>
+					</div>
+					<div class="thumb-container mjs center-y inactive" data-siteId="mjsDiv">
+						<div class="thumb" style="background-image: url(https://tmbo.xyz/wp-content/uploads/2022/05/mjs-thumb.png); background-size: cover;" onselectstart="return false"></div>
+						<div class="thumb-text mjs center-x center-y p-1">
+							MoJhoSto
+						</div>
+					</div>
+					<div class="thumb-container urza center-y inactive" data-siteId="urzaDiv">
+						<div class="thumb" style="background-image: url(https://tmbo.xyz/wp-content/uploads/2022/05/urza-thumb.png); background-size: cover;" onselectstart="return false"></div>
+						<div class="thumb-text urza center-x center-y p-1">
+							AskUrza.com
+						</div>
+					</div>
+					<div class="thumb-container venture center-y inactive" data-siteId="ventureDiv">
+						<div class="thumb" style="background-image: url(https://tmbo.xyz/wp-content/uploads/2022/05/venture-thumb.png); background-size: cover;" onselectstart="return false"></div>
+						<div class="thumb-text venture center-x center-y p-1">
+							Venture Tracker
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
-  <div id="davDiv" class="site-main">
-    <div id="davMain" class="disp-main center-x m-0 pt-2">
-      <div id="davSub" class="disp-sub center-x m-0 p-0">
-        <div class="disp-box-outer dav placeholder-wave m-0 p-0">
-          <div id="dispDavHome" class="placeholder disp-box-inner center-x">
-            <div class="icon-container">
-              <div class="icon-subcontainer center-x">
-                <i id="davSettings" class="fa-solid fa-gear fa-xl settings dav"></i>
-              </div>
-            </div>
-            <h3 id="davTitleH" class="dav-h"><a id="davTitle" href="https://scryfall.com/card/j21/15/davriel-soul-broker" class="link dav tooltip-base" target="_blank" rel="noopener noreferrer">Davriel's Contracts<img class="dav-img tooltip-follow center-x" src="https://media.wizards.com/2021/images/daily/dsb_73ssdgg2_new.png"></a></h3>
-            <p class="dav-p">Accept one of Davriel's <span id="davOffersLink" class="link dav link-offers">offers</span>, then accept one of Davriel's <span id="davConditionsLink" class="link dav link-conditions">conditions.</span></p>
-            <div>
-              <hr class="top">
-              <button id="davAllBtn" class="collapsible off">All Chosen Offers & Conditions 📚</button>
-              <div id="davAllDispMain" class="content">
-                <div class="center-x">
-                  <button id="davResetAllBtn" class="inner-button dav off">By Order Chosen</button>
-                  <button id="davEmblemBtn" class="inner-button  dav">Cumulative Emblems</button>
-                </div>
-                <hr class="px-6 break">
-                <div id="davAllDisp" class="ib-togglable dav"></div>
-                <div id="davEmblemDisp" class="ib-togglable dav hidden"></div>
-                <hr class="px-12 break">
-              </div>
-              <button id="davCurrentBtn" class="collapsible off">Current Contract 📜</button>
-              <div class="content">
-                <hr class="px-6 break">
-                <div id="davCurrentDisp"></div>
-                <hr class="px-12 break">
-              </div>
-            </div>
-            <hr class="middle">
-            <button id="runDav" class="dav-button">Start a new contract 🖊️</button>
-          </div>
-          <div id="dispDavOffers" class="disp-box-inner center-x hidden"></div>
-          <div id="dispDavConditions" class="disp-box-inner center-x hidden"></div>
-          <div id="dispDavSettings" class="disp-box-inner center-x hidden">
-            <div class="icon-container">
-              <div class="icon-subcontainer center-x">
-                <i class="fa-solid fa-desktop fa-xl type-toggle dav tooltip-base"><span class="tooltip-text">Desktop Mode</span></i>
-                <i class="fa-solid fa-mobile-screen-button fa-xl type-toggle dav hidden tooltip-base"><span class="tooltip-text">Mobile Mode</span></i>
-              </div>
-            </div>
-            <h3 class="dav-h"><span class="underlined">Customize Contracts</span></h3>
-            <hr class="px-6">
-            <button class="dav-button link-home dav"><strong>←</strong> Back</button>
-            <hr class="middle">
-            <h5 class="dav-h">Presets</h5>
-            <select id="presetCustom" class="dav-select"></select>
-            <button id="submitPresetCustom" class="dav-button submit-button">Submit</button>
-            <hr class="middle">
-            <h5 class="dav-h">Link (Direct link to raw text)</h5>
-            <div class="form-floating">
-              <input id="offerLinkCustom" type="text" class="form-control dav-form shadow-none" placeholder="pastebin.com" value="https://pastebin.com/raw/xZU7reYi" onfocus="this.select();">
-              <label for="offerLinkCustom" class="dav-label">Offer Link</label>
-            </div>
-            <div class="form-floating">
-              <input id="conditionLinkCustom" type="text" class="form-control dav-form shadow-none" placeholder="pastebin.com" value="https://pastebin.com/raw/FTMSCm1v" onfocus="this.select();">
-              <label for="conditionLinkCustom" class="dav-label">Offer Link</label>
-            </div>
-            <button id="submitLinkCustom" class="dav-button submit-button">Submit</button>
-            <hr class="middle">
-            <h5 class="dav-h">Text (Split by new lines)</h5>
-            <div class="form-floating">
-              <textarea id="offerTextCustom" type="text" class="form-control dav-form shadow-none" placeholder="pastebin.com" value="https://pastebin.com/raw/xZU7reYi" onfocus="this.select();"></textarea>
-              <label for="offerTextCustom" class="dav-label">Offer Text</label>
-            </div>
-            <div class="form-floating">
-              <textarea id="conditionTextCustom" type="text" class="form-control dav-form shadow-none" placeholder="pastebin.com" value="https://pastebin.com/raw/FTMSCm1v" onfocus="this.select();"></textarea>
-              <label for="conditionTextCustom" class="dav-label">Condition Text</label>
-            </div>
-            <button id="submitTextCustom" class="dav-button submit-button">Submit</button>
-            <hr class="middle">
-            <button class="dav-button link-home dav"><strong>←</strong> Back</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div id="cardMain" class="dav-card-main center-x m-0 p-0">
-      <div id="cardSub" class="dav-card-sub center-x m-0 p-0" style="visibility: hidden; opacity: 0%;">
-        <div class="dav-card grow-slight" onselectstart="return false">
-          <div class="dav-card-top center-x">
-            <p class="dav-card-header">
-            </p>
-          </div>
-          <div class="dav-card-bottom">
-            <div class="dav-card-bottom-left-boundary"></div>
-            <div class="dav-card-bottom-right-boundary"></div>
-            <p class="dav-card-text"></p>
-          </div>
-        </div>
-        <div class="dav-card grow-slight" onselectstart="return false">
-          <div class="dav-card-top center-x">
-            <p class="dav-card-header">
-            </p>
-          </div>
-          <div class="dav-card-bottom">
-            <div class="dav-card-bottom-left-boundary"></div>
-            <div class="dav-card-bottom-right-boundary"></div>
-            <p class="dav-card-text"></p>
-          </div>
-        </div>
-        <div class="dav-card grow-slight" onselectstart="return false">
-          <div class="dav-card-top center-x">
-            <p class="dav-card-header">
-            </p>
-          </div>
-          <div class="dav-card-bottom">
-            <div class="dav-card-bottom-left-boundary"></div>
-            <div class="dav-card-bottom-right-boundary"></div>
-            <p class="dav-card-text"></p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <p></p>
-    <p></p>
-  </div>
+		<div id="davDiv" class="site-main dav is-style-wide">
+			<div id="davMain" class="disp-main center-x m-0 pt-2">
+				<div id="davSub" class="disp-sub center-x m-0 p-0">
+					<div class="disp-box-outer dav placeholder-wave m-0 p-0">
+						<div id="dispDavHome" class="placeholder disp-box-inner center-x">
+							<div class="icon-container">
+								<div class="icon-subcontainer center-x">
+									<i id="davSettings" class="fa-solid fa-gear fa-xl settings dav"></i>
+								</div>
+							</div>
+							<h3 id="davTitleH" class="dav-h"><a id="davTitle" href="https://scryfall.com/card/j21/15/davriel-soul-broker" class="link dav tooltip-base" target="_blank" rel="noopener noreferrer">Davriel's Contracts<img class="dav-img tooltip-follow center-x" src="https://tmbo.xyz/wp-content/uploads/2022/05/dav-card.png"></a></h3>
+							<p class="dav-p description">Accept one of Davriel's <span id="davOffersLink" class="link dav link-offers">offers</span>, then accept one of Davriel's <span id="davConditionsLink" class="link dav link-conditions">conditions.</span></p>
+							<div>
+								<hr class="top">
+								<button id="davAllBtn" class="collapsible off">All Chosen Offers & Conditions 📚</button>
+								<div id="davAllDispMain" class="content">
+									<div class="center-x">
+										<button id="davResetAllBtn" class="inner-button dav off">By Order Chosen</button>
+										<button id="davEmblemBtn" class="inner-button  dav">Cumulative Emblems</button>
+									</div>
+									<hr class="px-6 break">
+									<div id="davAllDisp" class="ib-togglable dav"></div>
+									<div id="davEmblemDisp" class="ib-togglable dav hidden"></div>
+									<hr class="px-12 break">
+								</div>
+								<button id="davCurrentBtn" class="collapsible off">Current Contract 📜</button>
+								<div class="content">
+									<hr class="px-6 break">
+									<div id="davCurrentDisp"></div>
+									<hr class="px-12 break">
+								</div>
+							</div>
+							<hr class="middle">
+							<button id="runDav" class="dav-button">Start a new contract 🖊️</button>
+						</div>
+						<div id="dispDavOffers" class="disp-box-inner center-x hidden"></div>
+						<div id="dispDavConditions" class="disp-box-inner center-x hidden"></div>
+						<div id="dispDavSettings" class="disp-box-inner center-x hidden">
+							<div class="icon-container">
+								<div class="icon-subcontainer center-x">
+									<i class="fa-solid fa-desktop fa-xl type-toggle dav tooltip-base"><span class="tooltip-text">Desktop Mode</span></i>
+									<i class="fa-solid fa-mobile-screen-button fa-xl type-toggle dav hidden tooltip-base"><span class="tooltip-text">Mobile Mode</span></i>
+								</div>
+							</div>
+							<h3 class="dav-h"><span class="underlined">Customize Contracts</span></h3>
+							<hr class="px-6">
+							<button class="dav-button link-home dav"><strong>←</strong> Back</button>
+							<hr class="middle">
+							<h5 class="dav-h">Presets</h5>
+							<select id="presetCustom" class="dav-select"></select>
+							<button id="submitPresetCustom" class="dav-button submit-button">Submit</button>
+							<hr class="middle">
+							<h5 class="dav-h">Link (Direct link to raw text)</h5>
+							<div class="form-floating">
+								<input id="offerLinkCustom" type="text" class="form-control dav-form shadow-none" value="https://pastebin.com/raw/xZU7reYi" onfocus="this.select();">
+								<label for="offerLinkCustom" class="dav-label">Offer Link</label>
+							</div>
+							<div class="form-floating">
+								<input id="conditionLinkCustom" type="text" class="form-control dav-form shadow-none" value="https://pastebin.com/raw/FTMSCm1v" onfocus="this.select();">
+								<label for="conditionLinkCustom" class="dav-label">Condition Link</label>
+							</div>
+							<button id="submitLinkCustom" class="dav-button submit-button">Submit</button>
+							<hr class="middle">
+							<h5 class="dav-h">Text (Split by new lines)</h5>
+							<div class="form-floating">
+								<textarea id="offerTextCustom" type="text" class="form-control dav-form shadow-none" value="https://pastebin.com/raw/xZU7reYi" onfocus="this.select();"></textarea>
+								<label for="offerTextCustom" class="dav-label">Offer Text</label>
+							</div>
+							<div class="form-floating">
+								<textarea id="conditionTextCustom" type="text" class="form-control dav-form shadow-none" value="https://pastebin.com/raw/FTMSCm1v" onfocus="this.select();"></textarea>
+								<label for="conditionTextCustom" class="dav-label">Condition Text</label>
+							</div>
+							<button id="submitTextCustom" class="dav-button submit-button">Submit</button>
+							<hr class="middle">
+							<button class="dav-button link-home dav"><strong>←</strong> Back</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="cardMain" class="dav-card-main center-x m-0 p-0">
+				<div id="cardSub" class="dav-card-sub center-x m-0 p-0" style="visibility: hidden; opacity: 0%;">
+					<div class="dav-card grow-slight" onselectstart="return false">
+						<div class="dav-card-top center-x">
+							<p class="dav-card-header">
+							</p>
+						</div>
+						<div class="dav-card-bottom">
+							<div class="dav-card-bottom-left-boundary"></div>
+							<div class="dav-card-bottom-right-boundary"></div>
+							<p class="dav-card-text"></p>
+						</div>
+					</div>
+					<div class="dav-card grow-slight" onselectstart="return false">
+						<div class="dav-card-top center-x">
+							<p class="dav-card-header">
+							</p>
+						</div>
+						<div class="dav-card-bottom">
+							<div class="dav-card-bottom-left-boundary"></div>
+							<div class="dav-card-bottom-right-boundary"></div>
+							<p class="dav-card-text"></p>
+						</div>
+					</div>
+					<div class="dav-card grow-slight" onselectstart="return false">
+						<div class="dav-card-top center-x">
+							<p class="dav-card-header">
+							</p>
+						</div>
+						<div class="dav-card-bottom">
+							<div class="dav-card-bottom-left-boundary"></div>
+							<div class="dav-card-bottom-right-boundary"></div>
+							<p class="dav-card-text"></p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<p></p>
+			<p></p>
+		</div>
 
-  <div id="draftDiv" class="site-main hidden draft">
-    <div id="draftMain" class="disp-main center-x m-0 pt-2">
-      <div id="draftSub" class="disp-sub center-x m-0 p-0">
-        <div class="disp-box-outer draft m-0 p-0">
-          <div id="dispDraftHome" class="disp-box-inner">
-            <div class="icon-container">
-              <div class="icon-subcontainer center-x">
-                <i id="draftSettings" class="fa-solid fa-gear fa-xl settings draft"></i>
-              </div>
-            </div>
-            <h3 id="draftMainH" class="draft-h underlined">Spellbook Drafting</h3>
-            <p class="draft-p">Draft a card from the spellbook of the chosen card.</p>
-            <hr class="top">
-            <button id="draftHistoryColl" class="collapsible draft off">Drafted Cards 📚</button>
-            <div id="draftHistory" class="content">
-              <hr class="px-5 break">
-              <div id="draftHistoryInner"></div>
-              <hr class="px-9 break">
-            </div>
-            <hr class="middle">
-            <div class="si-container si-centered">
-              <input id="draftInput" class="si-input draft-select si-white-arrow" autocomplete="off">
-              <div class="si-option-container">
-                <div class="si-option-list" for-si-input="draftInput"></div>
-              </div>
-            </div>
-            <button id="draftBtn" class="draft-button">Draft from a spellbook 📖</button>
-          </div>
-          <div id="dispDraftSettings" class="disp-box-inner hidden">
-            <div class="icon-container">
-              <div class="icon-subcontainer center-x">
-                <i class="fa-solid fa-desktop fa-xl type-toggle draft tooltip-base"><span class="tooltip-text">Desktop Mode</span></i>
-                <i class="fa-solid fa-mobile-screen-button fa-xl type-toggle draft hidden tooltip-base"><span class="tooltip-text">Mobile Mode</span></i>
-              </div>
-            </div>
-            <h3 class="draft-h"><span class="underlined">Customize Spellbooks</span></h3>
-            <hr class="px-6">
-            <button class="draft-button link-home draft"><strong>←</strong> Back</button>
-            <hr class="middle">
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="disp-main draft">
-      <div id="draftCardDisp" class="disp-sub center-x m-0 p-0 draft" style="opacity: 0%; visibility: hidden;"></div>
-    </div>
-  </div>
+		<div id="draftDiv" class="site-main hidden draft is-style-wide">
+			<div id="draftMain" class="disp-main center-x m-0 pt-2">
+				<div id="draftSub" class="disp-sub center-x m-0 p-0">
+					<div class="disp-box-outer draft m-0 p-0">
+						<div id="dispDraftHome" class="disp-box-inner">
+							<div class="icon-container">
+								<div class="icon-subcontainer center-x">
+									<i id="draftSettings" class="fa-solid fa-gear fa-xl settings draft"></i>
+								</div>
+							</div>
+							<h3 id="draftMainH" class="draft-h underlined">Spellbook Drafting</h3>
+							<p class="draft-p description">Draft a card from the spellbook of the chosen card.</p>
+							<hr class="top">
+							<button id="draftHistoryColl" class="collapsible draft off">Drafted Cards 📚</button>
+							<div id="draftHistory" class="content">
+								<hr class="px-5 break">
+								<div id="draftHistoryInner"></div>
+								<hr class="px-9 break">
+							</div>
+							<hr class="middle">
+							<div class="si-container si-centered">
+								<input id="draftInput" class="si-input draft-select si-white-arrow" autocomplete="off">
+								<div class="si-option-container">
+									<div class="si-option-list" for-si-input="draftInput"></div>
+								</div>
+							</div>
+							<button id="draftBtn" class="draft-button">Draft from a spellbook 📖</button>
+						</div>
+						<div id="dispDraftSettings" class="disp-box-inner hidden">
+							<div class="icon-container">
+								<div class="icon-subcontainer center-x">
+									<i class="fa-solid fa-desktop fa-xl type-toggle draft tooltip-base"><span class="tooltip-text">Desktop Mode</span></i>
+									<i class="fa-solid fa-mobile-screen-button fa-xl type-toggle draft hidden tooltip-base"><span class="tooltip-text">Mobile Mode</span></i>
+								</div>
+							</div>
+							<h3 class="draft-h"><span class="underlined">Customize Spellbooks</span></h3>
+							<hr class="px-6">
+							<button class="draft-button link-home draft"><strong>←</strong> Back</button>
+							<hr class="middle">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="disp-main draft">
+				<div id="draftCardDisp" class="disp-sub center-x m-0 p-0 draft" style="opacity: 0%; visibility: hidden;"></div>
+			</div>
+		</div>
 
-  <div id="momirDiv" class="site-main hidden momir">
-    <div id="momirMain" class="disp-main center-x m-0 pt-2">
-      <div id="momirSub" class="disp-sub center-x m-0 p-0">
-        <div class="disp-box-outer momir m-0 p-0">
-          <div id="dispMomirHome" class="disp-box-inner">
-            <div class="icon-container">
-              <div class="icon-subcontainer center-x">
-                <i id="momirSettings" class="fa-solid fa-gear fa-xl settings momir"></i>
-              </div>
-            </div>
-            <h3 class="momir-h">Momir Basic</h3>
-            <p class="momir-p">WIP</p>
-            <hr class="top">
-            <button id="momirColl1" class="collapsible momir">Collapsible 1</button>
-            <div id="momirContent1" class="content">
-              <p class="momir-p">Test Collapsible 1</p>
-            </div>
-            <button id="momirColl2" class="collapsible momir">Collapsible 2</button>
-            <div id="momirContent2" class="content">
-              <p class="momir-p">Test Collapsible 2</p>
-            </div>
-          </div>
-          <div id="dispMomirSettings" class="disp-box-inner hidden">
-            <div class="icon-container">
-              <div class="icon-subcontainer center-x">
-                <i class="fa-solid fa-desktop fa-xl type-toggle momir tooltip-base"><span class="tooltip-text">Desktop Mode</span></i>
-                <i class="fa-solid fa-mobile-screen-button fa-xl type-toggle momir hidden tooltip-base"><span class="tooltip-text">Mobile Mode</span></i>
-              </div>
-            </div>
-            <h3 class="momir-h"><span class="underlined">Customize Momir</span></h3>
-            <hr class="px-6">
-            <button class="momir-button link-home momir"><strong>←</strong> Back</button>
-            <hr class="middle">
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+		<div id="momirDiv" class="site-main hidden momir is-style-wide">
+			<div id="momirMain" class="disp-main center-x m-0 pt-2">
+				<div id="momirSub" class="disp-sub center-x m-0 p-0">
+					<div class="disp-box-outer momir m-0 p-0">
+						<div id="dispMomirHome" class="disp-box-inner">
+							<div class="icon-container">
+								<div class="icon-subcontainer center-x">
+									<i id="momirSettings" class="fa-solid fa-gear fa-xl settings momir"></i>
+								</div>
+							</div>
+							<h3 class="momir-h">Momir Basic</h3>
+							<p class="momir-p description">WIP</p>
+							<hr class="top">
+							<button id="momirColl1" class="collapsible momir">Collapsible 1</button>
+							<div id="momirContent1" class="content">
+								<p class="momir-p">Test Collapsible 1</p>
+							</div>
+							<button id="momirColl2" class="collapsible momir">Collapsible 2</button>
+							<div id="momirContent2" class="content">
+								<p class="momir-p">Test Collapsible 2</p>
+							</div>
+						</div>
+						<div id="dispMomirSettings" class="disp-box-inner hidden">
+							<div class="icon-container">
+								<div class="icon-subcontainer center-x">
+									<i class="fa-solid fa-desktop fa-xl type-toggle momir tooltip-base"><span class="tooltip-text">Desktop Mode</span></i>
+									<i class="fa-solid fa-mobile-screen-button fa-xl type-toggle momir hidden tooltip-base"><span class="tooltip-text">Mobile Mode</span></i>
+								</div>
+							</div>
+							<h3 class="momir-h"><span class="underlined">Customize Momir</span></h3>
+							<hr class="px-6">
+							<button class="momir-button link-home momir"><strong>←</strong> Back</button>
+							<hr class="middle">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
-  <div id="mjsDiv" class="site-main hidden mjs">
-    <div id="mjsMain" class="disp-main center-x m-0 pt-2">
-      <div id="mjsSub" class="disp-sub center-x m-0 p-0">
-        <div class="disp-box-outer mjs m-0 p-0">
-          <div id="dispMjsHome" class="disp-box-inner">
-            <div class="icon-container">
-              <div class="icon-subcontainer center-x">
-                <i id="mjsSettings" class="fa-solid fa-gear fa-xl settings mjs"></i>
-              </div>
-            </div>
-            <h3 class="mjs-h">MoJhoSto</h3>
-            <p class="mjs-p">WIP</p>
-            <hr class="top">
-            <button id="mjsColl1" class="collapsible mjs">Collapsible 1</button>
-            <div id="mjsContent1" class="content">
-              <p class="mjs-p">Test Collapsible 1</p>
-            </div>
-            <button id="mjsColl2" class="collapsible mjs">Collapsible 2</button>
-            <div id="mjsContent2" class="content">
-              <p class="mjs-p">Test Collapsible 2</p>
-            </div>
-          </div>
-          <div id="dispMjsSettings" class="disp-box-inner hidden">
-            <div class="icon-container">
-              <div class="icon-subcontainer center-x">
-                <i class="fa-solid fa-desktop fa-xl type-toggle mjs tooltip-base"><span class="tooltip-text">Desktop Mode</span></i>
-                <i class="fa-solid fa-mobile-screen-button fa-xl type-toggle mjs hidden tooltip-base"><span class="tooltip-text">Mobile Mode</span></i>
-              </div>
-            </div>
-            <h3 class="draft-h"><span class="underlined">Customize MoJhoSto</span></h3>
-            <hr class="px-6">
-            <button class="mjs-button link-home mjs"><strong>←</strong> Back</button>
-            <hr class="middle">
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+		<div id="mjsDiv" class="site-main hidden mjs is-style-wide">
+			<div id="mjsMain" class="disp-main center-x m-0 pt-2">
+				<div id="mjsSub" class="disp-sub center-x m-0 p-0">
+					<div class="disp-box-outer mjs m-0 p-0">
+						<div id="dispMjsHome" class="disp-box-inner">
+							<div class="icon-container">
+								<div class="icon-subcontainer center-x">
+									<i id="mjsSettings" class="fa-solid fa-gear fa-xl settings mjs"></i>
+								</div>
+							</div>
+							<h3 class="mjs-h">MoJhoSto</h3>
+							<p class="mjs-p description">WIP</p>
+							<hr class="top">
+							<button id="mjsColl1" class="collapsible mjs">Collapsible 1</button>
+							<div id="mjsContent1" class="content">
+								<p class="mjs-p">Test Collapsible 1</p>
+							</div>
+							<button id="mjsColl2" class="collapsible mjs">Collapsible 2</button>
+							<div id="mjsContent2" class="content">
+								<p class="mjs-p">Test Collapsible 2</p>
+							</div>
+						</div>
+						<div id="dispMjsSettings" class="disp-box-inner hidden">
+							<div class="icon-container">
+								<div class="icon-subcontainer center-x">
+									<i class="fa-solid fa-desktop fa-xl type-toggle mjs tooltip-base"><span class="tooltip-text">Desktop Mode</span></i>
+									<i class="fa-solid fa-mobile-screen-button fa-xl type-toggle mjs hidden tooltip-base"><span class="tooltip-text">Mobile Mode</span></i>
+								</div>
+							</div>
+							<h3 class="mjs-h"><span class="underlined">Customize MoJhoSto</span></h3>
+							<hr class="px-6">
+							<button class="mjs-button link-home mjs"><strong>←</strong> Back</button>
+							<hr class="middle">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
-  <div id="preloadCache" style="display: none;"></div>
+		<div id="urzaDiv" class="site-main hidden urza is-style-wide">
+			<div id="urzaMain" class="disp-main center-x m-0 pt-2">
+				<div id="urzaSub" class="disp-sub center-x m-0 p-0">
+					<div class="disp-box-outer urza m-0 p-0">
+						<div id="dispUrzaHome" class="disp-box-inner">
+							<div class="icon-container">
+								<div class="icon-subcontainer center-x">
+									<i id="urzaSettings" class="fa-solid fa-gear fa-xl settings urza"></i>
+								</div>
+							</div>
+							<h3 class="urza-h">AskUrza.com</h3>
+							<p class="urza-p description">WIP</p>
+							<hr class="top">
+							<button id="urzaColl1" class="collapsible urza">Collapsible 1</button>
+							<div id="urzaContent1" class="content">
+								<p class="urza-p">Test Collapsible 1</p>
+							</div>
+							<button id="urzaColl2" class="collapsible urza">Collapsible 2</button>
+							<div id="urzaContent2" class="content">
+								<p class="urza-p">Test Collapsible 2</p>
+							</div>
+						</div>
+						<div id="dispUrzaSettings" class="disp-box-inner hidden">
+							<div class="icon-container">
+								<div class="icon-subcontainer center-x">
+									<i class="fa-solid fa-desktop fa-xl type-toggle urza tooltip-base"><span class="tooltip-text">Desktop Mode</span></i>
+									<i class="fa-solid fa-mobile-screen-button fa-xl type-toggle urza hidden tooltip-base"><span class="tooltip-text">Mobile Mode</span></i>
+								</div>
+							</div>
+							<h3 class="urza-h"><span class="underlined">Customize AskUrza.com</span></h3>
+							<hr class="px-6">
+							<button class="urza-button link-home urza"><strong>←</strong> Back</button>
+							<hr class="middle">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
+		<div id="ventureDiv" class="site-main hidden venture is-style-wide">
+			<div id="ventureMain" class="disp-main center-x m-0 pt-2">
+				<div id="ventureSub" class="disp-sub center-x m-0 p-0">
+					<div class="disp-box-outer venture m-0 p-0">
+						<div id="dispVentureHome" class="disp-box-inner">
+							<div class="icon-container">
+								<div class="icon-subcontainer center-x">
+									<i id="ventureSettings" class="fa-solid fa-gear fa-xl settings venture"></i>
+								</div>
+							</div>
+							<h3 class="venture-h">Venture Tracker</h3>
+							<p class="venture-p description">WIP</p>
+							<hr class="top">
+							<button id="ventureColl1" class="collapsible venture">Collapsible 1</button>
+							<div id="ventureContent1" class="content">
+								<p class="venture-p">Test Collapsible 1</p>
+							</div>
+							<button id="ventureColl2" class="collapsible venture">Collapsible 2</button>
+							<div id="ventureContent2" class="content">
+								<p class="venture-p">Test Collapsible 2</p>
+							</div>
+						</div>
+						<div id="dispVentureSettings" class="disp-box-inner hidden">
+							<div class="icon-container">
+								<div class="icon-subcontainer center-x">
+									<i class="fa-solid fa-desktop fa-xl type-toggle venture tooltip-base"><span class="tooltip-text">Desktop Mode</span></i>
+									<i class="fa-solid fa-mobile-screen-button fa-xl type-toggle venture hidden tooltip-base"><span class="tooltip-text">Mobile Mode</span></i>
+								</div>
+							</div>
+							<h3 class="venture-h"><span class="underlined">Customize Dungeons</span></h3>
+							<hr class="px-6">
+							<button class="venture-button link-home venture"><strong>←</strong> Back</button>
+							<hr class="middle">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="preloadCache" style="display: none;"></div>
+	</div>
+  
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/gh/tmbocheeko/searchable-inputs@v1.3/searchableinputs.js" crossorigin="anonymous" defer></script>
   <!-- DAV SCRIPT -->
-  <script src="https://cdn.jsdelivr.net/gh/tmbocheeko/Davriels-Contracts@v0.2/dav.js" crossorigin="anonymous" defer></script>
+  <script src="https://cdn.jsdelivr.net/gh/tmbocheeko/Davriels-Contracts@v0.3/dav.js" crossorigin="anonymous" defer></script>
 
 </body>
