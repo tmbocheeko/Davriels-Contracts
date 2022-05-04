@@ -8,15 +8,9 @@ var eventListenersPrimed = false;
 var custom = false;
 var emblemErr = false;
 
-let offersLink = "https://pastebin.com/raw/xZU7reYi";
-let conditionsLink = "https://pastebin.com/raw/FTMSCm1v";
-let mobileStyleLink = "https://pastebin.com/raw/K4FBB3KY";
-let presetsLink = "https://pastebin.com/raw/Z8BFY3DR";
-
-let davrielThumb = "https://i.imgur.com/eDhx8uj.png";
-let draftThumb = "https://i.imgur.com/lGSzD7S.png";
-let momirThumb = "https://i.imgur.com/CxYWVXZ.png";
-let mojhostoThumb = "https://i.imgur.com/irWpHxD.png";
+let offersLink = "https://tmbo.xyz/wp-content/uploads/2022/05/dav-offers.utf-8";
+let conditionsLink = "https://tmbo.xyz/wp-content/uploads/2022/05/dav-conditions.utf-8";
+let presetsLink = "https://tmbo.xyz/wp-content/uploads/2022/05/dav-presets.utf-8";
 
 let titlename =
 	"<a href='https://scryfall.com/card/j21/15/davriel-soul-broker' class='link dav' target='_blank' rel='noopener noreferrer'>Davriel's</a>";
@@ -295,6 +289,8 @@ function runSettingsLinks() {
 		else if (settingsLinks[i].classList.contains("draft")) var isFor = "Draft";
 		else if (settingsLinks[i].classList.contains("momir")) var isFor = "Momir";
 		else if (settingsLinks[i].classList.contains("mjs")) var isFor = "Mjs";
+		else if (settingsLinks[i].classList.contains("urza")) var isFor = "Urza";
+		else if (settingsLinks[i].classList.contains("venture")) var isFor = "Venture";
 		else break;
 		settingsLinks[i].linkFor = isFor;
 		settingsLinks[i].addEventListener("click", function () {
@@ -311,6 +307,8 @@ function runHomeLinks() {
 		else if (homeLinks[i].classList.contains("draft")) var isFor = "Draft";
 		else if (homeLinks[i].classList.contains("momir")) var isFor = "Momir";
 		else if (homeLinks[i].classList.contains("mjs")) var isFor = "Mjs";
+		else if (homeLinks[i].classList.contains("urza")) var isFor = "Urza";
+		else if (homeLinks[i].classList.contains("venture")) var isFor = "Venture";
 		else break;
 		homeLinks[i].linkFor = isFor;
 		homeLinks[i].addEventListener("click", function () {
