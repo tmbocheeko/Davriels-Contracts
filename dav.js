@@ -17,13 +17,13 @@ let titlename =
 let textname = "Davriel's";
 
 async function fetchText(link) {
-	let response = await fetch("https://cors-tmb-io.herokuapp.com/?" + link);
+	let response = await fetch(/*"https://cors-tmb-io.herokuapp.com/?" + */link);
 	let data = await response.text();
 	return data;
 }
 
 async function fetchJSON(link) {
-	let response = await fetch("https://cors-tmb-io.herokuapp.com/?" + link);
+	let response = await fetch(/*"https://cors-tmb-io.herokuapp.com/?" + */link);
 	let data = await response.json();
 	return data;
 }
